@@ -120,15 +120,25 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
-exports.Prisma.Test1DataModelScalarFieldEnum = {
+exports.Prisma.UserScalarFieldEnum = {
   id: 'id',
-  type: 'type',
-  name: 'name'
+  firstName: 'firstName',
+  lastName: 'lastName',
+  age: 'age',
+  gender: 'gender',
+  hairColor: 'hairColor',
+  postalCode: 'postalCode',
+  department: 'department'
 };
 
-exports.Prisma.Test1DataTypeScalarFieldEnum = {
-  id: 'id',
-  type: 'type'
+exports.Prisma.DepartmentSummaryScalarFieldEnum = {
+  departmentName: 'departmentName',
+  maleCount: 'maleCount',
+  femaleCount: 'femaleCount',
+  ageMin: 'ageMin',
+  ageMax: 'ageMax',
+  hairSummary: 'hairSummary',
+  addressUsers: 'addressUsers'
 };
 
 exports.Prisma.SortOrder = {
@@ -136,15 +146,25 @@ exports.Prisma.SortOrder = {
   desc: 'desc'
 };
 
+exports.Prisma.JsonNullValueInput = {
+  JsonNull: Prisma.JsonNull
+};
+
 exports.Prisma.QueryMode = {
   default: 'default',
   insensitive: 'insensitive'
 };
 
+exports.Prisma.JsonNullValueFilter = {
+  DbNull: Prisma.DbNull,
+  JsonNull: Prisma.JsonNull,
+  AnyNull: Prisma.AnyNull
+};
+
 
 exports.Prisma.ModelName = {
-  Test1DataModel: 'Test1DataModel',
-  Test1DataType: 'Test1DataType'
+  User: 'User',
+  DepartmentSummary: 'DepartmentSummary'
 };
 
 /**

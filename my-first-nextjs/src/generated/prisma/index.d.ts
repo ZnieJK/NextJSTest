@@ -14,15 +14,15 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model Test1DataModel
+ * Model User
  * 
  */
-export type Test1DataModel = $Result.DefaultSelection<Prisma.$Test1DataModelPayload>
+export type User = $Result.DefaultSelection<Prisma.$UserPayload>
 /**
- * Model Test1DataType
+ * Model DepartmentSummary
  * 
  */
-export type Test1DataType = $Result.DefaultSelection<Prisma.$Test1DataTypePayload>
+export type DepartmentSummary = $Result.DefaultSelection<Prisma.$DepartmentSummaryPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -31,8 +31,8 @@ export type Test1DataType = $Result.DefaultSelection<Prisma.$Test1DataTypePayloa
  * @example
  * ```
  * const prisma = new PrismaClient()
- * // Fetch zero or more Test1DataModels
- * const test1DataModels = await prisma.test1DataModel.findMany()
+ * // Fetch zero or more Users
+ * const users = await prisma.user.findMany()
  * ```
  *
  *
@@ -52,8 +52,8 @@ export class PrismaClient<
    * @example
    * ```
    * const prisma = new PrismaClient()
-   * // Fetch zero or more Test1DataModels
-   * const test1DataModels = await prisma.test1DataModel.findMany()
+   * // Fetch zero or more Users
+   * const users = await prisma.user.findMany()
    * ```
    *
    *
@@ -150,24 +150,24 @@ export class PrismaClient<
   }>>
 
       /**
-   * `prisma.test1DataModel`: Exposes CRUD operations for the **Test1DataModel** model.
+   * `prisma.user`: Exposes CRUD operations for the **User** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Test1DataModels
-    * const test1DataModels = await prisma.test1DataModel.findMany()
+    * // Fetch zero or more Users
+    * const users = await prisma.user.findMany()
     * ```
     */
-  get test1DataModel(): Prisma.Test1DataModelDelegate<ExtArgs, ClientOptions>;
+  get user(): Prisma.UserDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.test1DataType`: Exposes CRUD operations for the **Test1DataType** model.
+   * `prisma.departmentSummary`: Exposes CRUD operations for the **DepartmentSummary** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Test1DataTypes
-    * const test1DataTypes = await prisma.test1DataType.findMany()
+    * // Fetch zero or more DepartmentSummaries
+    * const departmentSummaries = await prisma.departmentSummary.findMany()
     * ```
     */
-  get test1DataType(): Prisma.Test1DataTypeDelegate<ExtArgs, ClientOptions>;
+  get departmentSummary(): Prisma.DepartmentSummaryDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -608,8 +608,8 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    Test1DataModel: 'Test1DataModel',
-    Test1DataType: 'Test1DataType'
+    User: 'User',
+    DepartmentSummary: 'DepartmentSummary'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -628,155 +628,155 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "test1DataModel" | "test1DataType"
+      modelProps: "user" | "departmentSummary"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
-      Test1DataModel: {
-        payload: Prisma.$Test1DataModelPayload<ExtArgs>
-        fields: Prisma.Test1DataModelFieldRefs
+      User: {
+        payload: Prisma.$UserPayload<ExtArgs>
+        fields: Prisma.UserFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.Test1DataModelFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Test1DataModelPayload> | null
+            args: Prisma.UserFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.Test1DataModelFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Test1DataModelPayload>
+            args: Prisma.UserFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>
           }
           findFirst: {
-            args: Prisma.Test1DataModelFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Test1DataModelPayload> | null
+            args: Prisma.UserFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.Test1DataModelFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Test1DataModelPayload>
+            args: Prisma.UserFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>
           }
           findMany: {
-            args: Prisma.Test1DataModelFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Test1DataModelPayload>[]
+            args: Prisma.UserFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>[]
           }
           create: {
-            args: Prisma.Test1DataModelCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Test1DataModelPayload>
+            args: Prisma.UserCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>
           }
           createMany: {
-            args: Prisma.Test1DataModelCreateManyArgs<ExtArgs>
+            args: Prisma.UserCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.Test1DataModelCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Test1DataModelPayload>[]
+            args: Prisma.UserCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>[]
           }
           delete: {
-            args: Prisma.Test1DataModelDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Test1DataModelPayload>
+            args: Prisma.UserDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>
           }
           update: {
-            args: Prisma.Test1DataModelUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Test1DataModelPayload>
+            args: Prisma.UserUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>
           }
           deleteMany: {
-            args: Prisma.Test1DataModelDeleteManyArgs<ExtArgs>
+            args: Prisma.UserDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.Test1DataModelUpdateManyArgs<ExtArgs>
+            args: Prisma.UserUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.Test1DataModelUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Test1DataModelPayload>[]
+            args: Prisma.UserUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>[]
           }
           upsert: {
-            args: Prisma.Test1DataModelUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Test1DataModelPayload>
+            args: Prisma.UserUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>
           }
           aggregate: {
-            args: Prisma.Test1DataModelAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateTest1DataModel>
+            args: Prisma.UserAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateUser>
           }
           groupBy: {
-            args: Prisma.Test1DataModelGroupByArgs<ExtArgs>
-            result: $Utils.Optional<Test1DataModelGroupByOutputType>[]
+            args: Prisma.UserGroupByArgs<ExtArgs>
+            result: $Utils.Optional<UserGroupByOutputType>[]
           }
           count: {
-            args: Prisma.Test1DataModelCountArgs<ExtArgs>
-            result: $Utils.Optional<Test1DataModelCountAggregateOutputType> | number
+            args: Prisma.UserCountArgs<ExtArgs>
+            result: $Utils.Optional<UserCountAggregateOutputType> | number
           }
         }
       }
-      Test1DataType: {
-        payload: Prisma.$Test1DataTypePayload<ExtArgs>
-        fields: Prisma.Test1DataTypeFieldRefs
+      DepartmentSummary: {
+        payload: Prisma.$DepartmentSummaryPayload<ExtArgs>
+        fields: Prisma.DepartmentSummaryFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.Test1DataTypeFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Test1DataTypePayload> | null
+            args: Prisma.DepartmentSummaryFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DepartmentSummaryPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.Test1DataTypeFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Test1DataTypePayload>
+            args: Prisma.DepartmentSummaryFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DepartmentSummaryPayload>
           }
           findFirst: {
-            args: Prisma.Test1DataTypeFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Test1DataTypePayload> | null
+            args: Prisma.DepartmentSummaryFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DepartmentSummaryPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.Test1DataTypeFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Test1DataTypePayload>
+            args: Prisma.DepartmentSummaryFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DepartmentSummaryPayload>
           }
           findMany: {
-            args: Prisma.Test1DataTypeFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Test1DataTypePayload>[]
+            args: Prisma.DepartmentSummaryFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DepartmentSummaryPayload>[]
           }
           create: {
-            args: Prisma.Test1DataTypeCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Test1DataTypePayload>
+            args: Prisma.DepartmentSummaryCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DepartmentSummaryPayload>
           }
           createMany: {
-            args: Prisma.Test1DataTypeCreateManyArgs<ExtArgs>
+            args: Prisma.DepartmentSummaryCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.Test1DataTypeCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Test1DataTypePayload>[]
+            args: Prisma.DepartmentSummaryCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DepartmentSummaryPayload>[]
           }
           delete: {
-            args: Prisma.Test1DataTypeDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Test1DataTypePayload>
+            args: Prisma.DepartmentSummaryDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DepartmentSummaryPayload>
           }
           update: {
-            args: Prisma.Test1DataTypeUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Test1DataTypePayload>
+            args: Prisma.DepartmentSummaryUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DepartmentSummaryPayload>
           }
           deleteMany: {
-            args: Prisma.Test1DataTypeDeleteManyArgs<ExtArgs>
+            args: Prisma.DepartmentSummaryDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.Test1DataTypeUpdateManyArgs<ExtArgs>
+            args: Prisma.DepartmentSummaryUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.Test1DataTypeUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Test1DataTypePayload>[]
+            args: Prisma.DepartmentSummaryUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DepartmentSummaryPayload>[]
           }
           upsert: {
-            args: Prisma.Test1DataTypeUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Test1DataTypePayload>
+            args: Prisma.DepartmentSummaryUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DepartmentSummaryPayload>
           }
           aggregate: {
-            args: Prisma.Test1DataTypeAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateTest1DataType>
+            args: Prisma.DepartmentSummaryAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateDepartmentSummary>
           }
           groupBy: {
-            args: Prisma.Test1DataTypeGroupByArgs<ExtArgs>
-            result: $Utils.Optional<Test1DataTypeGroupByOutputType>[]
+            args: Prisma.DepartmentSummaryGroupByArgs<ExtArgs>
+            result: $Utils.Optional<DepartmentSummaryGroupByOutputType>[]
           }
           count: {
-            args: Prisma.Test1DataTypeCountArgs<ExtArgs>
-            result: $Utils.Optional<Test1DataTypeCountAggregateOutputType> | number
+            args: Prisma.DepartmentSummaryCountArgs<ExtArgs>
+            result: $Utils.Optional<DepartmentSummaryCountAggregateOutputType> | number
           }
         }
       }
@@ -864,8 +864,8 @@ export namespace Prisma {
     omit?: Prisma.GlobalOmitConfig
   }
   export type GlobalOmitConfig = {
-    test1DataModel?: Test1DataModelOmit
-    test1DataType?: Test1DataTypeOmit
+    user?: UserOmit
+    departmentSummary?: DepartmentSummaryOmit
   }
 
   /* Types for Logging */
@@ -961,346 +961,410 @@ export namespace Prisma {
    */
 
   /**
-   * Model Test1DataModel
+   * Model User
    */
 
-  export type AggregateTest1DataModel = {
-    _count: Test1DataModelCountAggregateOutputType | null
-    _avg: Test1DataModelAvgAggregateOutputType | null
-    _sum: Test1DataModelSumAggregateOutputType | null
-    _min: Test1DataModelMinAggregateOutputType | null
-    _max: Test1DataModelMaxAggregateOutputType | null
+  export type AggregateUser = {
+    _count: UserCountAggregateOutputType | null
+    _avg: UserAvgAggregateOutputType | null
+    _sum: UserSumAggregateOutputType | null
+    _min: UserMinAggregateOutputType | null
+    _max: UserMaxAggregateOutputType | null
   }
 
-  export type Test1DataModelAvgAggregateOutputType = {
+  export type UserAvgAggregateOutputType = {
     id: number | null
+    age: number | null
   }
 
-  export type Test1DataModelSumAggregateOutputType = {
+  export type UserSumAggregateOutputType = {
     id: number | null
+    age: number | null
   }
 
-  export type Test1DataModelMinAggregateOutputType = {
+  export type UserMinAggregateOutputType = {
     id: number | null
-    type: string | null
-    name: string | null
+    firstName: string | null
+    lastName: string | null
+    age: number | null
+    gender: string | null
+    hairColor: string | null
+    postalCode: string | null
+    department: string | null
   }
 
-  export type Test1DataModelMaxAggregateOutputType = {
+  export type UserMaxAggregateOutputType = {
     id: number | null
-    type: string | null
-    name: string | null
+    firstName: string | null
+    lastName: string | null
+    age: number | null
+    gender: string | null
+    hairColor: string | null
+    postalCode: string | null
+    department: string | null
   }
 
-  export type Test1DataModelCountAggregateOutputType = {
+  export type UserCountAggregateOutputType = {
     id: number
-    type: number
-    name: number
+    firstName: number
+    lastName: number
+    age: number
+    gender: number
+    hairColor: number
+    postalCode: number
+    department: number
     _all: number
   }
 
 
-  export type Test1DataModelAvgAggregateInputType = {
+  export type UserAvgAggregateInputType = {
     id?: true
+    age?: true
   }
 
-  export type Test1DataModelSumAggregateInputType = {
+  export type UserSumAggregateInputType = {
     id?: true
+    age?: true
   }
 
-  export type Test1DataModelMinAggregateInputType = {
+  export type UserMinAggregateInputType = {
     id?: true
-    type?: true
-    name?: true
+    firstName?: true
+    lastName?: true
+    age?: true
+    gender?: true
+    hairColor?: true
+    postalCode?: true
+    department?: true
   }
 
-  export type Test1DataModelMaxAggregateInputType = {
+  export type UserMaxAggregateInputType = {
     id?: true
-    type?: true
-    name?: true
+    firstName?: true
+    lastName?: true
+    age?: true
+    gender?: true
+    hairColor?: true
+    postalCode?: true
+    department?: true
   }
 
-  export type Test1DataModelCountAggregateInputType = {
+  export type UserCountAggregateInputType = {
     id?: true
-    type?: true
-    name?: true
+    firstName?: true
+    lastName?: true
+    age?: true
+    gender?: true
+    hairColor?: true
+    postalCode?: true
+    department?: true
     _all?: true
   }
 
-  export type Test1DataModelAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Test1DataModel to aggregate.
+     * Filter which User to aggregate.
      */
-    where?: Test1DataModelWhereInput
+    where?: UserWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Test1DataModels to fetch.
+     * Determine the order of Users to fetch.
      */
-    orderBy?: Test1DataModelOrderByWithRelationInput | Test1DataModelOrderByWithRelationInput[]
+    orderBy?: UserOrderByWithRelationInput | UserOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: Test1DataModelWhereUniqueInput
+    cursor?: UserWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Test1DataModels from the position of the cursor.
+     * Take `±n` Users from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Test1DataModels.
+     * Skip the first `n` Users.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Test1DataModels
+     * Count returned Users
     **/
-    _count?: true | Test1DataModelCountAggregateInputType
+    _count?: true | UserCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: Test1DataModelAvgAggregateInputType
+    _avg?: UserAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: Test1DataModelSumAggregateInputType
+    _sum?: UserSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: Test1DataModelMinAggregateInputType
+    _min?: UserMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: Test1DataModelMaxAggregateInputType
+    _max?: UserMaxAggregateInputType
   }
 
-  export type GetTest1DataModelAggregateType<T extends Test1DataModelAggregateArgs> = {
-        [P in keyof T & keyof AggregateTest1DataModel]: P extends '_count' | 'count'
+  export type GetUserAggregateType<T extends UserAggregateArgs> = {
+        [P in keyof T & keyof AggregateUser]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateTest1DataModel[P]>
-      : GetScalarType<T[P], AggregateTest1DataModel[P]>
+        : GetScalarType<T[P], AggregateUser[P]>
+      : GetScalarType<T[P], AggregateUser[P]>
   }
 
 
 
 
-  export type Test1DataModelGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: Test1DataModelWhereInput
-    orderBy?: Test1DataModelOrderByWithAggregationInput | Test1DataModelOrderByWithAggregationInput[]
-    by: Test1DataModelScalarFieldEnum[] | Test1DataModelScalarFieldEnum
-    having?: Test1DataModelScalarWhereWithAggregatesInput
+  export type UserGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: UserWhereInput
+    orderBy?: UserOrderByWithAggregationInput | UserOrderByWithAggregationInput[]
+    by: UserScalarFieldEnum[] | UserScalarFieldEnum
+    having?: UserScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: Test1DataModelCountAggregateInputType | true
-    _avg?: Test1DataModelAvgAggregateInputType
-    _sum?: Test1DataModelSumAggregateInputType
-    _min?: Test1DataModelMinAggregateInputType
-    _max?: Test1DataModelMaxAggregateInputType
+    _count?: UserCountAggregateInputType | true
+    _avg?: UserAvgAggregateInputType
+    _sum?: UserSumAggregateInputType
+    _min?: UserMinAggregateInputType
+    _max?: UserMaxAggregateInputType
   }
 
-  export type Test1DataModelGroupByOutputType = {
+  export type UserGroupByOutputType = {
     id: number
-    type: string
-    name: string
-    _count: Test1DataModelCountAggregateOutputType | null
-    _avg: Test1DataModelAvgAggregateOutputType | null
-    _sum: Test1DataModelSumAggregateOutputType | null
-    _min: Test1DataModelMinAggregateOutputType | null
-    _max: Test1DataModelMaxAggregateOutputType | null
+    firstName: string
+    lastName: string
+    age: number
+    gender: string
+    hairColor: string
+    postalCode: string
+    department: string
+    _count: UserCountAggregateOutputType | null
+    _avg: UserAvgAggregateOutputType | null
+    _sum: UserSumAggregateOutputType | null
+    _min: UserMinAggregateOutputType | null
+    _max: UserMaxAggregateOutputType | null
   }
 
-  type GetTest1DataModelGroupByPayload<T extends Test1DataModelGroupByArgs> = Prisma.PrismaPromise<
+  type GetUserGroupByPayload<T extends UserGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<Test1DataModelGroupByOutputType, T['by']> &
+      PickEnumerable<UserGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof Test1DataModelGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof UserGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], Test1DataModelGroupByOutputType[P]>
-            : GetScalarType<T[P], Test1DataModelGroupByOutputType[P]>
+              : GetScalarType<T[P], UserGroupByOutputType[P]>
+            : GetScalarType<T[P], UserGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type Test1DataModelSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type UserSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    type?: boolean
-    name?: boolean
-  }, ExtArgs["result"]["test1DataModel"]>
+    firstName?: boolean
+    lastName?: boolean
+    age?: boolean
+    gender?: boolean
+    hairColor?: boolean
+    postalCode?: boolean
+    department?: boolean
+  }, ExtArgs["result"]["user"]>
 
-  export type Test1DataModelSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type UserSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    type?: boolean
-    name?: boolean
-  }, ExtArgs["result"]["test1DataModel"]>
+    firstName?: boolean
+    lastName?: boolean
+    age?: boolean
+    gender?: boolean
+    hairColor?: boolean
+    postalCode?: boolean
+    department?: boolean
+  }, ExtArgs["result"]["user"]>
 
-  export type Test1DataModelSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type UserSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    type?: boolean
-    name?: boolean
-  }, ExtArgs["result"]["test1DataModel"]>
+    firstName?: boolean
+    lastName?: boolean
+    age?: boolean
+    gender?: boolean
+    hairColor?: boolean
+    postalCode?: boolean
+    department?: boolean
+  }, ExtArgs["result"]["user"]>
 
-  export type Test1DataModelSelectScalar = {
+  export type UserSelectScalar = {
     id?: boolean
-    type?: boolean
-    name?: boolean
+    firstName?: boolean
+    lastName?: boolean
+    age?: boolean
+    gender?: boolean
+    hairColor?: boolean
+    postalCode?: boolean
+    department?: boolean
   }
 
-  export type Test1DataModelOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "type" | "name", ExtArgs["result"]["test1DataModel"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "firstName" | "lastName" | "age" | "gender" | "hairColor" | "postalCode" | "department", ExtArgs["result"]["user"]>
 
-  export type $Test1DataModelPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Test1DataModel"
+  export type $UserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "User"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: number
-      type: string
-      name: string
-    }, ExtArgs["result"]["test1DataModel"]>
+      firstName: string
+      lastName: string
+      age: number
+      gender: string
+      hairColor: string
+      postalCode: string
+      department: string
+    }, ExtArgs["result"]["user"]>
     composites: {}
   }
 
-  type Test1DataModelGetPayload<S extends boolean | null | undefined | Test1DataModelDefaultArgs> = $Result.GetResult<Prisma.$Test1DataModelPayload, S>
+  type UserGetPayload<S extends boolean | null | undefined | UserDefaultArgs> = $Result.GetResult<Prisma.$UserPayload, S>
 
-  type Test1DataModelCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<Test1DataModelFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: Test1DataModelCountAggregateInputType | true
+  type UserCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<UserFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: UserCountAggregateInputType | true
     }
 
-  export interface Test1DataModelDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Test1DataModel'], meta: { name: 'Test1DataModel' } }
+  export interface UserDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['User'], meta: { name: 'User' } }
     /**
-     * Find zero or one Test1DataModel that matches the filter.
-     * @param {Test1DataModelFindUniqueArgs} args - Arguments to find a Test1DataModel
+     * Find zero or one User that matches the filter.
+     * @param {UserFindUniqueArgs} args - Arguments to find a User
      * @example
-     * // Get one Test1DataModel
-     * const test1DataModel = await prisma.test1DataModel.findUnique({
+     * // Get one User
+     * const user = await prisma.user.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends Test1DataModelFindUniqueArgs>(args: SelectSubset<T, Test1DataModelFindUniqueArgs<ExtArgs>>): Prisma__Test1DataModelClient<$Result.GetResult<Prisma.$Test1DataModelPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends UserFindUniqueArgs>(args: SelectSubset<T, UserFindUniqueArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Test1DataModel that matches the filter or throw an error with `error.code='P2025'`
+     * Find one User that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {Test1DataModelFindUniqueOrThrowArgs} args - Arguments to find a Test1DataModel
+     * @param {UserFindUniqueOrThrowArgs} args - Arguments to find a User
      * @example
-     * // Get one Test1DataModel
-     * const test1DataModel = await prisma.test1DataModel.findUniqueOrThrow({
+     * // Get one User
+     * const user = await prisma.user.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends Test1DataModelFindUniqueOrThrowArgs>(args: SelectSubset<T, Test1DataModelFindUniqueOrThrowArgs<ExtArgs>>): Prisma__Test1DataModelClient<$Result.GetResult<Prisma.$Test1DataModelPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends UserFindUniqueOrThrowArgs>(args: SelectSubset<T, UserFindUniqueOrThrowArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Test1DataModel that matches the filter.
+     * Find the first User that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Test1DataModelFindFirstArgs} args - Arguments to find a Test1DataModel
+     * @param {UserFindFirstArgs} args - Arguments to find a User
      * @example
-     * // Get one Test1DataModel
-     * const test1DataModel = await prisma.test1DataModel.findFirst({
+     * // Get one User
+     * const user = await prisma.user.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends Test1DataModelFindFirstArgs>(args?: SelectSubset<T, Test1DataModelFindFirstArgs<ExtArgs>>): Prisma__Test1DataModelClient<$Result.GetResult<Prisma.$Test1DataModelPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends UserFindFirstArgs>(args?: SelectSubset<T, UserFindFirstArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Test1DataModel that matches the filter or
+     * Find the first User that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Test1DataModelFindFirstOrThrowArgs} args - Arguments to find a Test1DataModel
+     * @param {UserFindFirstOrThrowArgs} args - Arguments to find a User
      * @example
-     * // Get one Test1DataModel
-     * const test1DataModel = await prisma.test1DataModel.findFirstOrThrow({
+     * // Get one User
+     * const user = await prisma.user.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends Test1DataModelFindFirstOrThrowArgs>(args?: SelectSubset<T, Test1DataModelFindFirstOrThrowArgs<ExtArgs>>): Prisma__Test1DataModelClient<$Result.GetResult<Prisma.$Test1DataModelPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends UserFindFirstOrThrowArgs>(args?: SelectSubset<T, UserFindFirstOrThrowArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Test1DataModels that matches the filter.
+     * Find zero or more Users that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Test1DataModelFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {UserFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Test1DataModels
-     * const test1DataModels = await prisma.test1DataModel.findMany()
+     * // Get all Users
+     * const users = await prisma.user.findMany()
      * 
-     * // Get first 10 Test1DataModels
-     * const test1DataModels = await prisma.test1DataModel.findMany({ take: 10 })
+     * // Get first 10 Users
+     * const users = await prisma.user.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const test1DataModelWithIdOnly = await prisma.test1DataModel.findMany({ select: { id: true } })
+     * const userWithIdOnly = await prisma.user.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends Test1DataModelFindManyArgs>(args?: SelectSubset<T, Test1DataModelFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$Test1DataModelPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends UserFindManyArgs>(args?: SelectSubset<T, UserFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Test1DataModel.
-     * @param {Test1DataModelCreateArgs} args - Arguments to create a Test1DataModel.
+     * Create a User.
+     * @param {UserCreateArgs} args - Arguments to create a User.
      * @example
-     * // Create one Test1DataModel
-     * const Test1DataModel = await prisma.test1DataModel.create({
+     * // Create one User
+     * const User = await prisma.user.create({
      *   data: {
-     *     // ... data to create a Test1DataModel
+     *     // ... data to create a User
      *   }
      * })
      * 
      */
-    create<T extends Test1DataModelCreateArgs>(args: SelectSubset<T, Test1DataModelCreateArgs<ExtArgs>>): Prisma__Test1DataModelClient<$Result.GetResult<Prisma.$Test1DataModelPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends UserCreateArgs>(args: SelectSubset<T, UserCreateArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Test1DataModels.
-     * @param {Test1DataModelCreateManyArgs} args - Arguments to create many Test1DataModels.
+     * Create many Users.
+     * @param {UserCreateManyArgs} args - Arguments to create many Users.
      * @example
-     * // Create many Test1DataModels
-     * const test1DataModel = await prisma.test1DataModel.createMany({
+     * // Create many Users
+     * const user = await prisma.user.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends Test1DataModelCreateManyArgs>(args?: SelectSubset<T, Test1DataModelCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends UserCreateManyArgs>(args?: SelectSubset<T, UserCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Test1DataModels and returns the data saved in the database.
-     * @param {Test1DataModelCreateManyAndReturnArgs} args - Arguments to create many Test1DataModels.
+     * Create many Users and returns the data saved in the database.
+     * @param {UserCreateManyAndReturnArgs} args - Arguments to create many Users.
      * @example
-     * // Create many Test1DataModels
-     * const test1DataModel = await prisma.test1DataModel.createManyAndReturn({
+     * // Create many Users
+     * const user = await prisma.user.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Test1DataModels and only return the `id`
-     * const test1DataModelWithIdOnly = await prisma.test1DataModel.createManyAndReturn({
+     * // Create many Users and only return the `id`
+     * const userWithIdOnly = await prisma.user.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -1310,28 +1374,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends Test1DataModelCreateManyAndReturnArgs>(args?: SelectSubset<T, Test1DataModelCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$Test1DataModelPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends UserCreateManyAndReturnArgs>(args?: SelectSubset<T, UserCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Test1DataModel.
-     * @param {Test1DataModelDeleteArgs} args - Arguments to delete one Test1DataModel.
+     * Delete a User.
+     * @param {UserDeleteArgs} args - Arguments to delete one User.
      * @example
-     * // Delete one Test1DataModel
-     * const Test1DataModel = await prisma.test1DataModel.delete({
+     * // Delete one User
+     * const User = await prisma.user.delete({
      *   where: {
-     *     // ... filter to delete one Test1DataModel
+     *     // ... filter to delete one User
      *   }
      * })
      * 
      */
-    delete<T extends Test1DataModelDeleteArgs>(args: SelectSubset<T, Test1DataModelDeleteArgs<ExtArgs>>): Prisma__Test1DataModelClient<$Result.GetResult<Prisma.$Test1DataModelPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends UserDeleteArgs>(args: SelectSubset<T, UserDeleteArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Test1DataModel.
-     * @param {Test1DataModelUpdateArgs} args - Arguments to update one Test1DataModel.
+     * Update one User.
+     * @param {UserUpdateArgs} args - Arguments to update one User.
      * @example
-     * // Update one Test1DataModel
-     * const test1DataModel = await prisma.test1DataModel.update({
+     * // Update one User
+     * const user = await prisma.user.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1341,30 +1405,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends Test1DataModelUpdateArgs>(args: SelectSubset<T, Test1DataModelUpdateArgs<ExtArgs>>): Prisma__Test1DataModelClient<$Result.GetResult<Prisma.$Test1DataModelPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends UserUpdateArgs>(args: SelectSubset<T, UserUpdateArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Test1DataModels.
-     * @param {Test1DataModelDeleteManyArgs} args - Arguments to filter Test1DataModels to delete.
+     * Delete zero or more Users.
+     * @param {UserDeleteManyArgs} args - Arguments to filter Users to delete.
      * @example
-     * // Delete a few Test1DataModels
-     * const { count } = await prisma.test1DataModel.deleteMany({
+     * // Delete a few Users
+     * const { count } = await prisma.user.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends Test1DataModelDeleteManyArgs>(args?: SelectSubset<T, Test1DataModelDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends UserDeleteManyArgs>(args?: SelectSubset<T, UserDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Test1DataModels.
+     * Update zero or more Users.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Test1DataModelUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {UserUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Test1DataModels
-     * const test1DataModel = await prisma.test1DataModel.updateMany({
+     * // Update many Users
+     * const user = await prisma.user.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1374,14 +1438,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends Test1DataModelUpdateManyArgs>(args: SelectSubset<T, Test1DataModelUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends UserUpdateManyArgs>(args: SelectSubset<T, UserUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Test1DataModels and returns the data updated in the database.
-     * @param {Test1DataModelUpdateManyAndReturnArgs} args - Arguments to update many Test1DataModels.
+     * Update zero or more Users and returns the data updated in the database.
+     * @param {UserUpdateManyAndReturnArgs} args - Arguments to update many Users.
      * @example
-     * // Update many Test1DataModels
-     * const test1DataModel = await prisma.test1DataModel.updateManyAndReturn({
+     * // Update many Users
+     * const user = await prisma.user.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1390,8 +1454,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Test1DataModels and only return the `id`
-     * const test1DataModelWithIdOnly = await prisma.test1DataModel.updateManyAndReturn({
+     * // Update zero or more Users and only return the `id`
+     * const userWithIdOnly = await prisma.user.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -1404,56 +1468,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends Test1DataModelUpdateManyAndReturnArgs>(args: SelectSubset<T, Test1DataModelUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$Test1DataModelPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends UserUpdateManyAndReturnArgs>(args: SelectSubset<T, UserUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Test1DataModel.
-     * @param {Test1DataModelUpsertArgs} args - Arguments to update or create a Test1DataModel.
+     * Create or update one User.
+     * @param {UserUpsertArgs} args - Arguments to update or create a User.
      * @example
-     * // Update or create a Test1DataModel
-     * const test1DataModel = await prisma.test1DataModel.upsert({
+     * // Update or create a User
+     * const user = await prisma.user.upsert({
      *   create: {
-     *     // ... data to create a Test1DataModel
+     *     // ... data to create a User
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Test1DataModel we want to update
+     *     // ... the filter for the User we want to update
      *   }
      * })
      */
-    upsert<T extends Test1DataModelUpsertArgs>(args: SelectSubset<T, Test1DataModelUpsertArgs<ExtArgs>>): Prisma__Test1DataModelClient<$Result.GetResult<Prisma.$Test1DataModelPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends UserUpsertArgs>(args: SelectSubset<T, UserUpsertArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Test1DataModels.
+     * Count the number of Users.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Test1DataModelCountArgs} args - Arguments to filter Test1DataModels to count.
+     * @param {UserCountArgs} args - Arguments to filter Users to count.
      * @example
-     * // Count the number of Test1DataModels
-     * const count = await prisma.test1DataModel.count({
+     * // Count the number of Users
+     * const count = await prisma.user.count({
      *   where: {
-     *     // ... the filter for the Test1DataModels we want to count
+     *     // ... the filter for the Users we want to count
      *   }
      * })
     **/
-    count<T extends Test1DataModelCountArgs>(
-      args?: Subset<T, Test1DataModelCountArgs>,
+    count<T extends UserCountArgs>(
+      args?: Subset<T, UserCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], Test1DataModelCountAggregateOutputType>
+          : GetScalarType<T['select'], UserCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Test1DataModel.
+     * Allows you to perform aggregations operations on a User.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Test1DataModelAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {UserAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -1473,13 +1537,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends Test1DataModelAggregateArgs>(args: Subset<T, Test1DataModelAggregateArgs>): Prisma.PrismaPromise<GetTest1DataModelAggregateType<T>>
+    aggregate<T extends UserAggregateArgs>(args: Subset<T, UserAggregateArgs>): Prisma.PrismaPromise<GetUserAggregateType<T>>
 
     /**
-     * Group by Test1DataModel.
+     * Group by User.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Test1DataModelGroupByArgs} args - Group by arguments.
+     * @param {UserGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -1494,14 +1558,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends Test1DataModelGroupByArgs,
+      T extends UserGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: Test1DataModelGroupByArgs['orderBy'] }
-        : { orderBy?: Test1DataModelGroupByArgs['orderBy'] },
+        ? { orderBy: UserGroupByArgs['orderBy'] }
+        : { orderBy?: UserGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -1550,20 +1614,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, Test1DataModelGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetTest1DataModelGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, UserGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetUserGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Test1DataModel model
+   * Fields of the User model
    */
-  readonly fields: Test1DataModelFieldRefs;
+  readonly fields: UserFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Test1DataModel.
+   * The delegate class that acts as a "Promise-like" for User.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__Test1DataModelClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__UserClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -1591,708 +1655,777 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Test1DataModel model
+   * Fields of the User model
    */
-  interface Test1DataModelFieldRefs {
-    readonly id: FieldRef<"Test1DataModel", 'Int'>
-    readonly type: FieldRef<"Test1DataModel", 'String'>
-    readonly name: FieldRef<"Test1DataModel", 'String'>
+  interface UserFieldRefs {
+    readonly id: FieldRef<"User", 'Int'>
+    readonly firstName: FieldRef<"User", 'String'>
+    readonly lastName: FieldRef<"User", 'String'>
+    readonly age: FieldRef<"User", 'Int'>
+    readonly gender: FieldRef<"User", 'String'>
+    readonly hairColor: FieldRef<"User", 'String'>
+    readonly postalCode: FieldRef<"User", 'String'>
+    readonly department: FieldRef<"User", 'String'>
   }
     
 
   // Custom InputTypes
   /**
-   * Test1DataModel findUnique
+   * User findUnique
    */
-  export type Test1DataModelFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Test1DataModel
+     * Select specific fields to fetch from the User
      */
-    select?: Test1DataModelSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Test1DataModel
+     * Omit specific fields from the User
      */
-    omit?: Test1DataModelOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * Filter, which Test1DataModel to fetch.
+     * Filter, which User to fetch.
      */
-    where: Test1DataModelWhereUniqueInput
+    where: UserWhereUniqueInput
   }
 
   /**
-   * Test1DataModel findUniqueOrThrow
+   * User findUniqueOrThrow
    */
-  export type Test1DataModelFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Test1DataModel
+     * Select specific fields to fetch from the User
      */
-    select?: Test1DataModelSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Test1DataModel
+     * Omit specific fields from the User
      */
-    omit?: Test1DataModelOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * Filter, which Test1DataModel to fetch.
+     * Filter, which User to fetch.
      */
-    where: Test1DataModelWhereUniqueInput
+    where: UserWhereUniqueInput
   }
 
   /**
-   * Test1DataModel findFirst
+   * User findFirst
    */
-  export type Test1DataModelFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Test1DataModel
+     * Select specific fields to fetch from the User
      */
-    select?: Test1DataModelSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Test1DataModel
+     * Omit specific fields from the User
      */
-    omit?: Test1DataModelOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * Filter, which Test1DataModel to fetch.
+     * Filter, which User to fetch.
      */
-    where?: Test1DataModelWhereInput
+    where?: UserWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Test1DataModels to fetch.
+     * Determine the order of Users to fetch.
      */
-    orderBy?: Test1DataModelOrderByWithRelationInput | Test1DataModelOrderByWithRelationInput[]
+    orderBy?: UserOrderByWithRelationInput | UserOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Test1DataModels.
+     * Sets the position for searching for Users.
      */
-    cursor?: Test1DataModelWhereUniqueInput
+    cursor?: UserWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Test1DataModels from the position of the cursor.
+     * Take `±n` Users from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Test1DataModels.
+     * Skip the first `n` Users.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Test1DataModels.
+     * Filter by unique combinations of Users.
      */
-    distinct?: Test1DataModelScalarFieldEnum | Test1DataModelScalarFieldEnum[]
+    distinct?: UserScalarFieldEnum | UserScalarFieldEnum[]
   }
 
   /**
-   * Test1DataModel findFirstOrThrow
+   * User findFirstOrThrow
    */
-  export type Test1DataModelFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Test1DataModel
+     * Select specific fields to fetch from the User
      */
-    select?: Test1DataModelSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Test1DataModel
+     * Omit specific fields from the User
      */
-    omit?: Test1DataModelOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * Filter, which Test1DataModel to fetch.
+     * Filter, which User to fetch.
      */
-    where?: Test1DataModelWhereInput
+    where?: UserWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Test1DataModels to fetch.
+     * Determine the order of Users to fetch.
      */
-    orderBy?: Test1DataModelOrderByWithRelationInput | Test1DataModelOrderByWithRelationInput[]
+    orderBy?: UserOrderByWithRelationInput | UserOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Test1DataModels.
+     * Sets the position for searching for Users.
      */
-    cursor?: Test1DataModelWhereUniqueInput
+    cursor?: UserWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Test1DataModels from the position of the cursor.
+     * Take `±n` Users from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Test1DataModels.
+     * Skip the first `n` Users.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Test1DataModels.
+     * Filter by unique combinations of Users.
      */
-    distinct?: Test1DataModelScalarFieldEnum | Test1DataModelScalarFieldEnum[]
+    distinct?: UserScalarFieldEnum | UserScalarFieldEnum[]
   }
 
   /**
-   * Test1DataModel findMany
+   * User findMany
    */
-  export type Test1DataModelFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Test1DataModel
+     * Select specific fields to fetch from the User
      */
-    select?: Test1DataModelSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Test1DataModel
+     * Omit specific fields from the User
      */
-    omit?: Test1DataModelOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * Filter, which Test1DataModels to fetch.
+     * Filter, which Users to fetch.
      */
-    where?: Test1DataModelWhereInput
+    where?: UserWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Test1DataModels to fetch.
+     * Determine the order of Users to fetch.
      */
-    orderBy?: Test1DataModelOrderByWithRelationInput | Test1DataModelOrderByWithRelationInput[]
+    orderBy?: UserOrderByWithRelationInput | UserOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Test1DataModels.
+     * Sets the position for listing Users.
      */
-    cursor?: Test1DataModelWhereUniqueInput
+    cursor?: UserWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Test1DataModels from the position of the cursor.
+     * Take `±n` Users from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Test1DataModels.
+     * Skip the first `n` Users.
      */
     skip?: number
-    distinct?: Test1DataModelScalarFieldEnum | Test1DataModelScalarFieldEnum[]
+    distinct?: UserScalarFieldEnum | UserScalarFieldEnum[]
   }
 
   /**
-   * Test1DataModel create
+   * User create
    */
-  export type Test1DataModelCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Test1DataModel
+     * Select specific fields to fetch from the User
      */
-    select?: Test1DataModelSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Test1DataModel
+     * Omit specific fields from the User
      */
-    omit?: Test1DataModelOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * The data needed to create a Test1DataModel.
+     * The data needed to create a User.
      */
-    data: XOR<Test1DataModelCreateInput, Test1DataModelUncheckedCreateInput>
+    data: XOR<UserCreateInput, UserUncheckedCreateInput>
   }
 
   /**
-   * Test1DataModel createMany
+   * User createMany
    */
-  export type Test1DataModelCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Test1DataModels.
+     * The data used to create many Users.
      */
-    data: Test1DataModelCreateManyInput | Test1DataModelCreateManyInput[]
+    data: UserCreateManyInput | UserCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Test1DataModel createManyAndReturn
+   * User createManyAndReturn
    */
-  export type Test1DataModelCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Test1DataModel
+     * Select specific fields to fetch from the User
      */
-    select?: Test1DataModelSelectCreateManyAndReturn<ExtArgs> | null
+    select?: UserSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Test1DataModel
+     * Omit specific fields from the User
      */
-    omit?: Test1DataModelOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * The data used to create many Test1DataModels.
+     * The data used to create many Users.
      */
-    data: Test1DataModelCreateManyInput | Test1DataModelCreateManyInput[]
+    data: UserCreateManyInput | UserCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Test1DataModel update
+   * User update
    */
-  export type Test1DataModelUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Test1DataModel
+     * Select specific fields to fetch from the User
      */
-    select?: Test1DataModelSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Test1DataModel
+     * Omit specific fields from the User
      */
-    omit?: Test1DataModelOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * The data needed to update a Test1DataModel.
+     * The data needed to update a User.
      */
-    data: XOR<Test1DataModelUpdateInput, Test1DataModelUncheckedUpdateInput>
+    data: XOR<UserUpdateInput, UserUncheckedUpdateInput>
     /**
-     * Choose, which Test1DataModel to update.
+     * Choose, which User to update.
      */
-    where: Test1DataModelWhereUniqueInput
+    where: UserWhereUniqueInput
   }
 
   /**
-   * Test1DataModel updateMany
+   * User updateMany
    */
-  export type Test1DataModelUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Test1DataModels.
+     * The data used to update Users.
      */
-    data: XOR<Test1DataModelUpdateManyMutationInput, Test1DataModelUncheckedUpdateManyInput>
+    data: XOR<UserUpdateManyMutationInput, UserUncheckedUpdateManyInput>
     /**
-     * Filter which Test1DataModels to update
+     * Filter which Users to update
      */
-    where?: Test1DataModelWhereInput
+    where?: UserWhereInput
     /**
-     * Limit how many Test1DataModels to update.
+     * Limit how many Users to update.
      */
     limit?: number
   }
 
   /**
-   * Test1DataModel updateManyAndReturn
+   * User updateManyAndReturn
    */
-  export type Test1DataModelUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Test1DataModel
+     * Select specific fields to fetch from the User
      */
-    select?: Test1DataModelSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: UserSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Test1DataModel
+     * Omit specific fields from the User
      */
-    omit?: Test1DataModelOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * The data used to update Test1DataModels.
+     * The data used to update Users.
      */
-    data: XOR<Test1DataModelUpdateManyMutationInput, Test1DataModelUncheckedUpdateManyInput>
+    data: XOR<UserUpdateManyMutationInput, UserUncheckedUpdateManyInput>
     /**
-     * Filter which Test1DataModels to update
+     * Filter which Users to update
      */
-    where?: Test1DataModelWhereInput
+    where?: UserWhereInput
     /**
-     * Limit how many Test1DataModels to update.
+     * Limit how many Users to update.
      */
     limit?: number
   }
 
   /**
-   * Test1DataModel upsert
+   * User upsert
    */
-  export type Test1DataModelUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Test1DataModel
+     * Select specific fields to fetch from the User
      */
-    select?: Test1DataModelSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Test1DataModel
+     * Omit specific fields from the User
      */
-    omit?: Test1DataModelOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * The filter to search for the Test1DataModel to update in case it exists.
+     * The filter to search for the User to update in case it exists.
      */
-    where: Test1DataModelWhereUniqueInput
+    where: UserWhereUniqueInput
     /**
-     * In case the Test1DataModel found by the `where` argument doesn't exist, create a new Test1DataModel with this data.
+     * In case the User found by the `where` argument doesn't exist, create a new User with this data.
      */
-    create: XOR<Test1DataModelCreateInput, Test1DataModelUncheckedCreateInput>
+    create: XOR<UserCreateInput, UserUncheckedCreateInput>
     /**
-     * In case the Test1DataModel was found with the provided `where` argument, update it with this data.
+     * In case the User was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<Test1DataModelUpdateInput, Test1DataModelUncheckedUpdateInput>
+    update: XOR<UserUpdateInput, UserUncheckedUpdateInput>
   }
 
   /**
-   * Test1DataModel delete
+   * User delete
    */
-  export type Test1DataModelDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Test1DataModel
+     * Select specific fields to fetch from the User
      */
-    select?: Test1DataModelSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Test1DataModel
+     * Omit specific fields from the User
      */
-    omit?: Test1DataModelOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * Filter which Test1DataModel to delete.
+     * Filter which User to delete.
      */
-    where: Test1DataModelWhereUniqueInput
+    where: UserWhereUniqueInput
   }
 
   /**
-   * Test1DataModel deleteMany
+   * User deleteMany
    */
-  export type Test1DataModelDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Test1DataModels to delete
+     * Filter which Users to delete
      */
-    where?: Test1DataModelWhereInput
+    where?: UserWhereInput
     /**
-     * Limit how many Test1DataModels to delete.
+     * Limit how many Users to delete.
      */
     limit?: number
   }
 
   /**
-   * Test1DataModel without action
+   * User without action
    */
-  export type Test1DataModelDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Test1DataModel
+     * Select specific fields to fetch from the User
      */
-    select?: Test1DataModelSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Test1DataModel
+     * Omit specific fields from the User
      */
-    omit?: Test1DataModelOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
   }
 
 
   /**
-   * Model Test1DataType
+   * Model DepartmentSummary
    */
 
-  export type AggregateTest1DataType = {
-    _count: Test1DataTypeCountAggregateOutputType | null
-    _avg: Test1DataTypeAvgAggregateOutputType | null
-    _sum: Test1DataTypeSumAggregateOutputType | null
-    _min: Test1DataTypeMinAggregateOutputType | null
-    _max: Test1DataTypeMaxAggregateOutputType | null
+  export type AggregateDepartmentSummary = {
+    _count: DepartmentSummaryCountAggregateOutputType | null
+    _avg: DepartmentSummaryAvgAggregateOutputType | null
+    _sum: DepartmentSummarySumAggregateOutputType | null
+    _min: DepartmentSummaryMinAggregateOutputType | null
+    _max: DepartmentSummaryMaxAggregateOutputType | null
   }
 
-  export type Test1DataTypeAvgAggregateOutputType = {
-    id: number | null
+  export type DepartmentSummaryAvgAggregateOutputType = {
+    maleCount: number | null
+    femaleCount: number | null
+    ageMin: number | null
+    ageMax: number | null
   }
 
-  export type Test1DataTypeSumAggregateOutputType = {
-    id: number | null
+  export type DepartmentSummarySumAggregateOutputType = {
+    maleCount: number | null
+    femaleCount: number | null
+    ageMin: number | null
+    ageMax: number | null
   }
 
-  export type Test1DataTypeMinAggregateOutputType = {
-    id: number | null
-    type: string | null
+  export type DepartmentSummaryMinAggregateOutputType = {
+    departmentName: string | null
+    maleCount: number | null
+    femaleCount: number | null
+    ageMin: number | null
+    ageMax: number | null
   }
 
-  export type Test1DataTypeMaxAggregateOutputType = {
-    id: number | null
-    type: string | null
+  export type DepartmentSummaryMaxAggregateOutputType = {
+    departmentName: string | null
+    maleCount: number | null
+    femaleCount: number | null
+    ageMin: number | null
+    ageMax: number | null
   }
 
-  export type Test1DataTypeCountAggregateOutputType = {
-    id: number
-    type: number
+  export type DepartmentSummaryCountAggregateOutputType = {
+    departmentName: number
+    maleCount: number
+    femaleCount: number
+    ageMin: number
+    ageMax: number
+    hairSummary: number
+    addressUsers: number
     _all: number
   }
 
 
-  export type Test1DataTypeAvgAggregateInputType = {
-    id?: true
+  export type DepartmentSummaryAvgAggregateInputType = {
+    maleCount?: true
+    femaleCount?: true
+    ageMin?: true
+    ageMax?: true
   }
 
-  export type Test1DataTypeSumAggregateInputType = {
-    id?: true
+  export type DepartmentSummarySumAggregateInputType = {
+    maleCount?: true
+    femaleCount?: true
+    ageMin?: true
+    ageMax?: true
   }
 
-  export type Test1DataTypeMinAggregateInputType = {
-    id?: true
-    type?: true
+  export type DepartmentSummaryMinAggregateInputType = {
+    departmentName?: true
+    maleCount?: true
+    femaleCount?: true
+    ageMin?: true
+    ageMax?: true
   }
 
-  export type Test1DataTypeMaxAggregateInputType = {
-    id?: true
-    type?: true
+  export type DepartmentSummaryMaxAggregateInputType = {
+    departmentName?: true
+    maleCount?: true
+    femaleCount?: true
+    ageMin?: true
+    ageMax?: true
   }
 
-  export type Test1DataTypeCountAggregateInputType = {
-    id?: true
-    type?: true
+  export type DepartmentSummaryCountAggregateInputType = {
+    departmentName?: true
+    maleCount?: true
+    femaleCount?: true
+    ageMin?: true
+    ageMax?: true
+    hairSummary?: true
+    addressUsers?: true
     _all?: true
   }
 
-  export type Test1DataTypeAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DepartmentSummaryAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Test1DataType to aggregate.
+     * Filter which DepartmentSummary to aggregate.
      */
-    where?: Test1DataTypeWhereInput
+    where?: DepartmentSummaryWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Test1DataTypes to fetch.
+     * Determine the order of DepartmentSummaries to fetch.
      */
-    orderBy?: Test1DataTypeOrderByWithRelationInput | Test1DataTypeOrderByWithRelationInput[]
+    orderBy?: DepartmentSummaryOrderByWithRelationInput | DepartmentSummaryOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: Test1DataTypeWhereUniqueInput
+    cursor?: DepartmentSummaryWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Test1DataTypes from the position of the cursor.
+     * Take `±n` DepartmentSummaries from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Test1DataTypes.
+     * Skip the first `n` DepartmentSummaries.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Test1DataTypes
+     * Count returned DepartmentSummaries
     **/
-    _count?: true | Test1DataTypeCountAggregateInputType
+    _count?: true | DepartmentSummaryCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: Test1DataTypeAvgAggregateInputType
+    _avg?: DepartmentSummaryAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: Test1DataTypeSumAggregateInputType
+    _sum?: DepartmentSummarySumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: Test1DataTypeMinAggregateInputType
+    _min?: DepartmentSummaryMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: Test1DataTypeMaxAggregateInputType
+    _max?: DepartmentSummaryMaxAggregateInputType
   }
 
-  export type GetTest1DataTypeAggregateType<T extends Test1DataTypeAggregateArgs> = {
-        [P in keyof T & keyof AggregateTest1DataType]: P extends '_count' | 'count'
+  export type GetDepartmentSummaryAggregateType<T extends DepartmentSummaryAggregateArgs> = {
+        [P in keyof T & keyof AggregateDepartmentSummary]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateTest1DataType[P]>
-      : GetScalarType<T[P], AggregateTest1DataType[P]>
+        : GetScalarType<T[P], AggregateDepartmentSummary[P]>
+      : GetScalarType<T[P], AggregateDepartmentSummary[P]>
   }
 
 
 
 
-  export type Test1DataTypeGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: Test1DataTypeWhereInput
-    orderBy?: Test1DataTypeOrderByWithAggregationInput | Test1DataTypeOrderByWithAggregationInput[]
-    by: Test1DataTypeScalarFieldEnum[] | Test1DataTypeScalarFieldEnum
-    having?: Test1DataTypeScalarWhereWithAggregatesInput
+  export type DepartmentSummaryGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: DepartmentSummaryWhereInput
+    orderBy?: DepartmentSummaryOrderByWithAggregationInput | DepartmentSummaryOrderByWithAggregationInput[]
+    by: DepartmentSummaryScalarFieldEnum[] | DepartmentSummaryScalarFieldEnum
+    having?: DepartmentSummaryScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: Test1DataTypeCountAggregateInputType | true
-    _avg?: Test1DataTypeAvgAggregateInputType
-    _sum?: Test1DataTypeSumAggregateInputType
-    _min?: Test1DataTypeMinAggregateInputType
-    _max?: Test1DataTypeMaxAggregateInputType
+    _count?: DepartmentSummaryCountAggregateInputType | true
+    _avg?: DepartmentSummaryAvgAggregateInputType
+    _sum?: DepartmentSummarySumAggregateInputType
+    _min?: DepartmentSummaryMinAggregateInputType
+    _max?: DepartmentSummaryMaxAggregateInputType
   }
 
-  export type Test1DataTypeGroupByOutputType = {
-    id: number
-    type: string
-    _count: Test1DataTypeCountAggregateOutputType | null
-    _avg: Test1DataTypeAvgAggregateOutputType | null
-    _sum: Test1DataTypeSumAggregateOutputType | null
-    _min: Test1DataTypeMinAggregateOutputType | null
-    _max: Test1DataTypeMaxAggregateOutputType | null
+  export type DepartmentSummaryGroupByOutputType = {
+    departmentName: string
+    maleCount: number
+    femaleCount: number
+    ageMin: number
+    ageMax: number
+    hairSummary: JsonValue
+    addressUsers: JsonValue
+    _count: DepartmentSummaryCountAggregateOutputType | null
+    _avg: DepartmentSummaryAvgAggregateOutputType | null
+    _sum: DepartmentSummarySumAggregateOutputType | null
+    _min: DepartmentSummaryMinAggregateOutputType | null
+    _max: DepartmentSummaryMaxAggregateOutputType | null
   }
 
-  type GetTest1DataTypeGroupByPayload<T extends Test1DataTypeGroupByArgs> = Prisma.PrismaPromise<
+  type GetDepartmentSummaryGroupByPayload<T extends DepartmentSummaryGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<Test1DataTypeGroupByOutputType, T['by']> &
+      PickEnumerable<DepartmentSummaryGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof Test1DataTypeGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof DepartmentSummaryGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], Test1DataTypeGroupByOutputType[P]>
-            : GetScalarType<T[P], Test1DataTypeGroupByOutputType[P]>
+              : GetScalarType<T[P], DepartmentSummaryGroupByOutputType[P]>
+            : GetScalarType<T[P], DepartmentSummaryGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type Test1DataTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean
-    type?: boolean
-  }, ExtArgs["result"]["test1DataType"]>
+  export type DepartmentSummarySelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    departmentName?: boolean
+    maleCount?: boolean
+    femaleCount?: boolean
+    ageMin?: boolean
+    ageMax?: boolean
+    hairSummary?: boolean
+    addressUsers?: boolean
+  }, ExtArgs["result"]["departmentSummary"]>
 
-  export type Test1DataTypeSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean
-    type?: boolean
-  }, ExtArgs["result"]["test1DataType"]>
+  export type DepartmentSummarySelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    departmentName?: boolean
+    maleCount?: boolean
+    femaleCount?: boolean
+    ageMin?: boolean
+    ageMax?: boolean
+    hairSummary?: boolean
+    addressUsers?: boolean
+  }, ExtArgs["result"]["departmentSummary"]>
 
-  export type Test1DataTypeSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean
-    type?: boolean
-  }, ExtArgs["result"]["test1DataType"]>
+  export type DepartmentSummarySelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    departmentName?: boolean
+    maleCount?: boolean
+    femaleCount?: boolean
+    ageMin?: boolean
+    ageMax?: boolean
+    hairSummary?: boolean
+    addressUsers?: boolean
+  }, ExtArgs["result"]["departmentSummary"]>
 
-  export type Test1DataTypeSelectScalar = {
-    id?: boolean
-    type?: boolean
+  export type DepartmentSummarySelectScalar = {
+    departmentName?: boolean
+    maleCount?: boolean
+    femaleCount?: boolean
+    ageMin?: boolean
+    ageMax?: boolean
+    hairSummary?: boolean
+    addressUsers?: boolean
   }
 
-  export type Test1DataTypeOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "type", ExtArgs["result"]["test1DataType"]>
+  export type DepartmentSummaryOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"departmentName" | "maleCount" | "femaleCount" | "ageMin" | "ageMax" | "hairSummary" | "addressUsers", ExtArgs["result"]["departmentSummary"]>
 
-  export type $Test1DataTypePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Test1DataType"
+  export type $DepartmentSummaryPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "DepartmentSummary"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
-      id: number
-      type: string
-    }, ExtArgs["result"]["test1DataType"]>
+      departmentName: string
+      maleCount: number
+      femaleCount: number
+      ageMin: number
+      ageMax: number
+      hairSummary: Prisma.JsonValue
+      addressUsers: Prisma.JsonValue
+    }, ExtArgs["result"]["departmentSummary"]>
     composites: {}
   }
 
-  type Test1DataTypeGetPayload<S extends boolean | null | undefined | Test1DataTypeDefaultArgs> = $Result.GetResult<Prisma.$Test1DataTypePayload, S>
+  type DepartmentSummaryGetPayload<S extends boolean | null | undefined | DepartmentSummaryDefaultArgs> = $Result.GetResult<Prisma.$DepartmentSummaryPayload, S>
 
-  type Test1DataTypeCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<Test1DataTypeFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: Test1DataTypeCountAggregateInputType | true
+  type DepartmentSummaryCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<DepartmentSummaryFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: DepartmentSummaryCountAggregateInputType | true
     }
 
-  export interface Test1DataTypeDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Test1DataType'], meta: { name: 'Test1DataType' } }
+  export interface DepartmentSummaryDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['DepartmentSummary'], meta: { name: 'DepartmentSummary' } }
     /**
-     * Find zero or one Test1DataType that matches the filter.
-     * @param {Test1DataTypeFindUniqueArgs} args - Arguments to find a Test1DataType
+     * Find zero or one DepartmentSummary that matches the filter.
+     * @param {DepartmentSummaryFindUniqueArgs} args - Arguments to find a DepartmentSummary
      * @example
-     * // Get one Test1DataType
-     * const test1DataType = await prisma.test1DataType.findUnique({
+     * // Get one DepartmentSummary
+     * const departmentSummary = await prisma.departmentSummary.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends Test1DataTypeFindUniqueArgs>(args: SelectSubset<T, Test1DataTypeFindUniqueArgs<ExtArgs>>): Prisma__Test1DataTypeClient<$Result.GetResult<Prisma.$Test1DataTypePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends DepartmentSummaryFindUniqueArgs>(args: SelectSubset<T, DepartmentSummaryFindUniqueArgs<ExtArgs>>): Prisma__DepartmentSummaryClient<$Result.GetResult<Prisma.$DepartmentSummaryPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Test1DataType that matches the filter or throw an error with `error.code='P2025'`
+     * Find one DepartmentSummary that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {Test1DataTypeFindUniqueOrThrowArgs} args - Arguments to find a Test1DataType
+     * @param {DepartmentSummaryFindUniqueOrThrowArgs} args - Arguments to find a DepartmentSummary
      * @example
-     * // Get one Test1DataType
-     * const test1DataType = await prisma.test1DataType.findUniqueOrThrow({
+     * // Get one DepartmentSummary
+     * const departmentSummary = await prisma.departmentSummary.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends Test1DataTypeFindUniqueOrThrowArgs>(args: SelectSubset<T, Test1DataTypeFindUniqueOrThrowArgs<ExtArgs>>): Prisma__Test1DataTypeClient<$Result.GetResult<Prisma.$Test1DataTypePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends DepartmentSummaryFindUniqueOrThrowArgs>(args: SelectSubset<T, DepartmentSummaryFindUniqueOrThrowArgs<ExtArgs>>): Prisma__DepartmentSummaryClient<$Result.GetResult<Prisma.$DepartmentSummaryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Test1DataType that matches the filter.
+     * Find the first DepartmentSummary that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Test1DataTypeFindFirstArgs} args - Arguments to find a Test1DataType
+     * @param {DepartmentSummaryFindFirstArgs} args - Arguments to find a DepartmentSummary
      * @example
-     * // Get one Test1DataType
-     * const test1DataType = await prisma.test1DataType.findFirst({
+     * // Get one DepartmentSummary
+     * const departmentSummary = await prisma.departmentSummary.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends Test1DataTypeFindFirstArgs>(args?: SelectSubset<T, Test1DataTypeFindFirstArgs<ExtArgs>>): Prisma__Test1DataTypeClient<$Result.GetResult<Prisma.$Test1DataTypePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends DepartmentSummaryFindFirstArgs>(args?: SelectSubset<T, DepartmentSummaryFindFirstArgs<ExtArgs>>): Prisma__DepartmentSummaryClient<$Result.GetResult<Prisma.$DepartmentSummaryPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Test1DataType that matches the filter or
+     * Find the first DepartmentSummary that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Test1DataTypeFindFirstOrThrowArgs} args - Arguments to find a Test1DataType
+     * @param {DepartmentSummaryFindFirstOrThrowArgs} args - Arguments to find a DepartmentSummary
      * @example
-     * // Get one Test1DataType
-     * const test1DataType = await prisma.test1DataType.findFirstOrThrow({
+     * // Get one DepartmentSummary
+     * const departmentSummary = await prisma.departmentSummary.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends Test1DataTypeFindFirstOrThrowArgs>(args?: SelectSubset<T, Test1DataTypeFindFirstOrThrowArgs<ExtArgs>>): Prisma__Test1DataTypeClient<$Result.GetResult<Prisma.$Test1DataTypePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends DepartmentSummaryFindFirstOrThrowArgs>(args?: SelectSubset<T, DepartmentSummaryFindFirstOrThrowArgs<ExtArgs>>): Prisma__DepartmentSummaryClient<$Result.GetResult<Prisma.$DepartmentSummaryPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Test1DataTypes that matches the filter.
+     * Find zero or more DepartmentSummaries that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Test1DataTypeFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {DepartmentSummaryFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Test1DataTypes
-     * const test1DataTypes = await prisma.test1DataType.findMany()
+     * // Get all DepartmentSummaries
+     * const departmentSummaries = await prisma.departmentSummary.findMany()
      * 
-     * // Get first 10 Test1DataTypes
-     * const test1DataTypes = await prisma.test1DataType.findMany({ take: 10 })
+     * // Get first 10 DepartmentSummaries
+     * const departmentSummaries = await prisma.departmentSummary.findMany({ take: 10 })
      * 
-     * // Only select the `id`
-     * const test1DataTypeWithIdOnly = await prisma.test1DataType.findMany({ select: { id: true } })
+     * // Only select the `departmentName`
+     * const departmentSummaryWithDepartmentNameOnly = await prisma.departmentSummary.findMany({ select: { departmentName: true } })
      * 
      */
-    findMany<T extends Test1DataTypeFindManyArgs>(args?: SelectSubset<T, Test1DataTypeFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$Test1DataTypePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends DepartmentSummaryFindManyArgs>(args?: SelectSubset<T, DepartmentSummaryFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$DepartmentSummaryPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Test1DataType.
-     * @param {Test1DataTypeCreateArgs} args - Arguments to create a Test1DataType.
+     * Create a DepartmentSummary.
+     * @param {DepartmentSummaryCreateArgs} args - Arguments to create a DepartmentSummary.
      * @example
-     * // Create one Test1DataType
-     * const Test1DataType = await prisma.test1DataType.create({
+     * // Create one DepartmentSummary
+     * const DepartmentSummary = await prisma.departmentSummary.create({
      *   data: {
-     *     // ... data to create a Test1DataType
+     *     // ... data to create a DepartmentSummary
      *   }
      * })
      * 
      */
-    create<T extends Test1DataTypeCreateArgs>(args: SelectSubset<T, Test1DataTypeCreateArgs<ExtArgs>>): Prisma__Test1DataTypeClient<$Result.GetResult<Prisma.$Test1DataTypePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends DepartmentSummaryCreateArgs>(args: SelectSubset<T, DepartmentSummaryCreateArgs<ExtArgs>>): Prisma__DepartmentSummaryClient<$Result.GetResult<Prisma.$DepartmentSummaryPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Test1DataTypes.
-     * @param {Test1DataTypeCreateManyArgs} args - Arguments to create many Test1DataTypes.
+     * Create many DepartmentSummaries.
+     * @param {DepartmentSummaryCreateManyArgs} args - Arguments to create many DepartmentSummaries.
      * @example
-     * // Create many Test1DataTypes
-     * const test1DataType = await prisma.test1DataType.createMany({
+     * // Create many DepartmentSummaries
+     * const departmentSummary = await prisma.departmentSummary.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends Test1DataTypeCreateManyArgs>(args?: SelectSubset<T, Test1DataTypeCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends DepartmentSummaryCreateManyArgs>(args?: SelectSubset<T, DepartmentSummaryCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Test1DataTypes and returns the data saved in the database.
-     * @param {Test1DataTypeCreateManyAndReturnArgs} args - Arguments to create many Test1DataTypes.
+     * Create many DepartmentSummaries and returns the data saved in the database.
+     * @param {DepartmentSummaryCreateManyAndReturnArgs} args - Arguments to create many DepartmentSummaries.
      * @example
-     * // Create many Test1DataTypes
-     * const test1DataType = await prisma.test1DataType.createManyAndReturn({
+     * // Create many DepartmentSummaries
+     * const departmentSummary = await prisma.departmentSummary.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Test1DataTypes and only return the `id`
-     * const test1DataTypeWithIdOnly = await prisma.test1DataType.createManyAndReturn({
-     *   select: { id: true },
+     * // Create many DepartmentSummaries and only return the `departmentName`
+     * const departmentSummaryWithDepartmentNameOnly = await prisma.departmentSummary.createManyAndReturn({
+     *   select: { departmentName: true },
      *   data: [
      *     // ... provide data here
      *   ]
@@ -2301,28 +2434,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends Test1DataTypeCreateManyAndReturnArgs>(args?: SelectSubset<T, Test1DataTypeCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$Test1DataTypePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends DepartmentSummaryCreateManyAndReturnArgs>(args?: SelectSubset<T, DepartmentSummaryCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$DepartmentSummaryPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Test1DataType.
-     * @param {Test1DataTypeDeleteArgs} args - Arguments to delete one Test1DataType.
+     * Delete a DepartmentSummary.
+     * @param {DepartmentSummaryDeleteArgs} args - Arguments to delete one DepartmentSummary.
      * @example
-     * // Delete one Test1DataType
-     * const Test1DataType = await prisma.test1DataType.delete({
+     * // Delete one DepartmentSummary
+     * const DepartmentSummary = await prisma.departmentSummary.delete({
      *   where: {
-     *     // ... filter to delete one Test1DataType
+     *     // ... filter to delete one DepartmentSummary
      *   }
      * })
      * 
      */
-    delete<T extends Test1DataTypeDeleteArgs>(args: SelectSubset<T, Test1DataTypeDeleteArgs<ExtArgs>>): Prisma__Test1DataTypeClient<$Result.GetResult<Prisma.$Test1DataTypePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends DepartmentSummaryDeleteArgs>(args: SelectSubset<T, DepartmentSummaryDeleteArgs<ExtArgs>>): Prisma__DepartmentSummaryClient<$Result.GetResult<Prisma.$DepartmentSummaryPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Test1DataType.
-     * @param {Test1DataTypeUpdateArgs} args - Arguments to update one Test1DataType.
+     * Update one DepartmentSummary.
+     * @param {DepartmentSummaryUpdateArgs} args - Arguments to update one DepartmentSummary.
      * @example
-     * // Update one Test1DataType
-     * const test1DataType = await prisma.test1DataType.update({
+     * // Update one DepartmentSummary
+     * const departmentSummary = await prisma.departmentSummary.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2332,30 +2465,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends Test1DataTypeUpdateArgs>(args: SelectSubset<T, Test1DataTypeUpdateArgs<ExtArgs>>): Prisma__Test1DataTypeClient<$Result.GetResult<Prisma.$Test1DataTypePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends DepartmentSummaryUpdateArgs>(args: SelectSubset<T, DepartmentSummaryUpdateArgs<ExtArgs>>): Prisma__DepartmentSummaryClient<$Result.GetResult<Prisma.$DepartmentSummaryPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Test1DataTypes.
-     * @param {Test1DataTypeDeleteManyArgs} args - Arguments to filter Test1DataTypes to delete.
+     * Delete zero or more DepartmentSummaries.
+     * @param {DepartmentSummaryDeleteManyArgs} args - Arguments to filter DepartmentSummaries to delete.
      * @example
-     * // Delete a few Test1DataTypes
-     * const { count } = await prisma.test1DataType.deleteMany({
+     * // Delete a few DepartmentSummaries
+     * const { count } = await prisma.departmentSummary.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends Test1DataTypeDeleteManyArgs>(args?: SelectSubset<T, Test1DataTypeDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends DepartmentSummaryDeleteManyArgs>(args?: SelectSubset<T, DepartmentSummaryDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Test1DataTypes.
+     * Update zero or more DepartmentSummaries.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Test1DataTypeUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {DepartmentSummaryUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Test1DataTypes
-     * const test1DataType = await prisma.test1DataType.updateMany({
+     * // Update many DepartmentSummaries
+     * const departmentSummary = await prisma.departmentSummary.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2365,14 +2498,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends Test1DataTypeUpdateManyArgs>(args: SelectSubset<T, Test1DataTypeUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends DepartmentSummaryUpdateManyArgs>(args: SelectSubset<T, DepartmentSummaryUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Test1DataTypes and returns the data updated in the database.
-     * @param {Test1DataTypeUpdateManyAndReturnArgs} args - Arguments to update many Test1DataTypes.
+     * Update zero or more DepartmentSummaries and returns the data updated in the database.
+     * @param {DepartmentSummaryUpdateManyAndReturnArgs} args - Arguments to update many DepartmentSummaries.
      * @example
-     * // Update many Test1DataTypes
-     * const test1DataType = await prisma.test1DataType.updateManyAndReturn({
+     * // Update many DepartmentSummaries
+     * const departmentSummary = await prisma.departmentSummary.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2381,9 +2514,9 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Test1DataTypes and only return the `id`
-     * const test1DataTypeWithIdOnly = await prisma.test1DataType.updateManyAndReturn({
-     *   select: { id: true },
+     * // Update zero or more DepartmentSummaries and only return the `departmentName`
+     * const departmentSummaryWithDepartmentNameOnly = await prisma.departmentSummary.updateManyAndReturn({
+     *   select: { departmentName: true },
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2395,56 +2528,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends Test1DataTypeUpdateManyAndReturnArgs>(args: SelectSubset<T, Test1DataTypeUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$Test1DataTypePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends DepartmentSummaryUpdateManyAndReturnArgs>(args: SelectSubset<T, DepartmentSummaryUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$DepartmentSummaryPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Test1DataType.
-     * @param {Test1DataTypeUpsertArgs} args - Arguments to update or create a Test1DataType.
+     * Create or update one DepartmentSummary.
+     * @param {DepartmentSummaryUpsertArgs} args - Arguments to update or create a DepartmentSummary.
      * @example
-     * // Update or create a Test1DataType
-     * const test1DataType = await prisma.test1DataType.upsert({
+     * // Update or create a DepartmentSummary
+     * const departmentSummary = await prisma.departmentSummary.upsert({
      *   create: {
-     *     // ... data to create a Test1DataType
+     *     // ... data to create a DepartmentSummary
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Test1DataType we want to update
+     *     // ... the filter for the DepartmentSummary we want to update
      *   }
      * })
      */
-    upsert<T extends Test1DataTypeUpsertArgs>(args: SelectSubset<T, Test1DataTypeUpsertArgs<ExtArgs>>): Prisma__Test1DataTypeClient<$Result.GetResult<Prisma.$Test1DataTypePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends DepartmentSummaryUpsertArgs>(args: SelectSubset<T, DepartmentSummaryUpsertArgs<ExtArgs>>): Prisma__DepartmentSummaryClient<$Result.GetResult<Prisma.$DepartmentSummaryPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Test1DataTypes.
+     * Count the number of DepartmentSummaries.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Test1DataTypeCountArgs} args - Arguments to filter Test1DataTypes to count.
+     * @param {DepartmentSummaryCountArgs} args - Arguments to filter DepartmentSummaries to count.
      * @example
-     * // Count the number of Test1DataTypes
-     * const count = await prisma.test1DataType.count({
+     * // Count the number of DepartmentSummaries
+     * const count = await prisma.departmentSummary.count({
      *   where: {
-     *     // ... the filter for the Test1DataTypes we want to count
+     *     // ... the filter for the DepartmentSummaries we want to count
      *   }
      * })
     **/
-    count<T extends Test1DataTypeCountArgs>(
-      args?: Subset<T, Test1DataTypeCountArgs>,
+    count<T extends DepartmentSummaryCountArgs>(
+      args?: Subset<T, DepartmentSummaryCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], Test1DataTypeCountAggregateOutputType>
+          : GetScalarType<T['select'], DepartmentSummaryCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Test1DataType.
+     * Allows you to perform aggregations operations on a DepartmentSummary.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Test1DataTypeAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {DepartmentSummaryAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -2464,13 +2597,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends Test1DataTypeAggregateArgs>(args: Subset<T, Test1DataTypeAggregateArgs>): Prisma.PrismaPromise<GetTest1DataTypeAggregateType<T>>
+    aggregate<T extends DepartmentSummaryAggregateArgs>(args: Subset<T, DepartmentSummaryAggregateArgs>): Prisma.PrismaPromise<GetDepartmentSummaryAggregateType<T>>
 
     /**
-     * Group by Test1DataType.
+     * Group by DepartmentSummary.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Test1DataTypeGroupByArgs} args - Group by arguments.
+     * @param {DepartmentSummaryGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -2485,14 +2618,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends Test1DataTypeGroupByArgs,
+      T extends DepartmentSummaryGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: Test1DataTypeGroupByArgs['orderBy'] }
-        : { orderBy?: Test1DataTypeGroupByArgs['orderBy'] },
+        ? { orderBy: DepartmentSummaryGroupByArgs['orderBy'] }
+        : { orderBy?: DepartmentSummaryGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -2541,20 +2674,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, Test1DataTypeGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetTest1DataTypeGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, DepartmentSummaryGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetDepartmentSummaryGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Test1DataType model
+   * Fields of the DepartmentSummary model
    */
-  readonly fields: Test1DataTypeFieldRefs;
+  readonly fields: DepartmentSummaryFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Test1DataType.
+   * The delegate class that acts as a "Promise-like" for DepartmentSummary.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__Test1DataTypeClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__DepartmentSummaryClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -2582,374 +2715,379 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Test1DataType model
+   * Fields of the DepartmentSummary model
    */
-  interface Test1DataTypeFieldRefs {
-    readonly id: FieldRef<"Test1DataType", 'Int'>
-    readonly type: FieldRef<"Test1DataType", 'String'>
+  interface DepartmentSummaryFieldRefs {
+    readonly departmentName: FieldRef<"DepartmentSummary", 'String'>
+    readonly maleCount: FieldRef<"DepartmentSummary", 'Int'>
+    readonly femaleCount: FieldRef<"DepartmentSummary", 'Int'>
+    readonly ageMin: FieldRef<"DepartmentSummary", 'Int'>
+    readonly ageMax: FieldRef<"DepartmentSummary", 'Int'>
+    readonly hairSummary: FieldRef<"DepartmentSummary", 'Json'>
+    readonly addressUsers: FieldRef<"DepartmentSummary", 'Json'>
   }
     
 
   // Custom InputTypes
   /**
-   * Test1DataType findUnique
+   * DepartmentSummary findUnique
    */
-  export type Test1DataTypeFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DepartmentSummaryFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Test1DataType
+     * Select specific fields to fetch from the DepartmentSummary
      */
-    select?: Test1DataTypeSelect<ExtArgs> | null
+    select?: DepartmentSummarySelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Test1DataType
+     * Omit specific fields from the DepartmentSummary
      */
-    omit?: Test1DataTypeOmit<ExtArgs> | null
+    omit?: DepartmentSummaryOmit<ExtArgs> | null
     /**
-     * Filter, which Test1DataType to fetch.
+     * Filter, which DepartmentSummary to fetch.
      */
-    where: Test1DataTypeWhereUniqueInput
+    where: DepartmentSummaryWhereUniqueInput
   }
 
   /**
-   * Test1DataType findUniqueOrThrow
+   * DepartmentSummary findUniqueOrThrow
    */
-  export type Test1DataTypeFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DepartmentSummaryFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Test1DataType
+     * Select specific fields to fetch from the DepartmentSummary
      */
-    select?: Test1DataTypeSelect<ExtArgs> | null
+    select?: DepartmentSummarySelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Test1DataType
+     * Omit specific fields from the DepartmentSummary
      */
-    omit?: Test1DataTypeOmit<ExtArgs> | null
+    omit?: DepartmentSummaryOmit<ExtArgs> | null
     /**
-     * Filter, which Test1DataType to fetch.
+     * Filter, which DepartmentSummary to fetch.
      */
-    where: Test1DataTypeWhereUniqueInput
+    where: DepartmentSummaryWhereUniqueInput
   }
 
   /**
-   * Test1DataType findFirst
+   * DepartmentSummary findFirst
    */
-  export type Test1DataTypeFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DepartmentSummaryFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Test1DataType
+     * Select specific fields to fetch from the DepartmentSummary
      */
-    select?: Test1DataTypeSelect<ExtArgs> | null
+    select?: DepartmentSummarySelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Test1DataType
+     * Omit specific fields from the DepartmentSummary
      */
-    omit?: Test1DataTypeOmit<ExtArgs> | null
+    omit?: DepartmentSummaryOmit<ExtArgs> | null
     /**
-     * Filter, which Test1DataType to fetch.
+     * Filter, which DepartmentSummary to fetch.
      */
-    where?: Test1DataTypeWhereInput
+    where?: DepartmentSummaryWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Test1DataTypes to fetch.
+     * Determine the order of DepartmentSummaries to fetch.
      */
-    orderBy?: Test1DataTypeOrderByWithRelationInput | Test1DataTypeOrderByWithRelationInput[]
+    orderBy?: DepartmentSummaryOrderByWithRelationInput | DepartmentSummaryOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Test1DataTypes.
+     * Sets the position for searching for DepartmentSummaries.
      */
-    cursor?: Test1DataTypeWhereUniqueInput
+    cursor?: DepartmentSummaryWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Test1DataTypes from the position of the cursor.
+     * Take `±n` DepartmentSummaries from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Test1DataTypes.
+     * Skip the first `n` DepartmentSummaries.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Test1DataTypes.
+     * Filter by unique combinations of DepartmentSummaries.
      */
-    distinct?: Test1DataTypeScalarFieldEnum | Test1DataTypeScalarFieldEnum[]
+    distinct?: DepartmentSummaryScalarFieldEnum | DepartmentSummaryScalarFieldEnum[]
   }
 
   /**
-   * Test1DataType findFirstOrThrow
+   * DepartmentSummary findFirstOrThrow
    */
-  export type Test1DataTypeFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DepartmentSummaryFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Test1DataType
+     * Select specific fields to fetch from the DepartmentSummary
      */
-    select?: Test1DataTypeSelect<ExtArgs> | null
+    select?: DepartmentSummarySelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Test1DataType
+     * Omit specific fields from the DepartmentSummary
      */
-    omit?: Test1DataTypeOmit<ExtArgs> | null
+    omit?: DepartmentSummaryOmit<ExtArgs> | null
     /**
-     * Filter, which Test1DataType to fetch.
+     * Filter, which DepartmentSummary to fetch.
      */
-    where?: Test1DataTypeWhereInput
+    where?: DepartmentSummaryWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Test1DataTypes to fetch.
+     * Determine the order of DepartmentSummaries to fetch.
      */
-    orderBy?: Test1DataTypeOrderByWithRelationInput | Test1DataTypeOrderByWithRelationInput[]
+    orderBy?: DepartmentSummaryOrderByWithRelationInput | DepartmentSummaryOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Test1DataTypes.
+     * Sets the position for searching for DepartmentSummaries.
      */
-    cursor?: Test1DataTypeWhereUniqueInput
+    cursor?: DepartmentSummaryWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Test1DataTypes from the position of the cursor.
+     * Take `±n` DepartmentSummaries from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Test1DataTypes.
+     * Skip the first `n` DepartmentSummaries.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Test1DataTypes.
+     * Filter by unique combinations of DepartmentSummaries.
      */
-    distinct?: Test1DataTypeScalarFieldEnum | Test1DataTypeScalarFieldEnum[]
+    distinct?: DepartmentSummaryScalarFieldEnum | DepartmentSummaryScalarFieldEnum[]
   }
 
   /**
-   * Test1DataType findMany
+   * DepartmentSummary findMany
    */
-  export type Test1DataTypeFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DepartmentSummaryFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Test1DataType
+     * Select specific fields to fetch from the DepartmentSummary
      */
-    select?: Test1DataTypeSelect<ExtArgs> | null
+    select?: DepartmentSummarySelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Test1DataType
+     * Omit specific fields from the DepartmentSummary
      */
-    omit?: Test1DataTypeOmit<ExtArgs> | null
+    omit?: DepartmentSummaryOmit<ExtArgs> | null
     /**
-     * Filter, which Test1DataTypes to fetch.
+     * Filter, which DepartmentSummaries to fetch.
      */
-    where?: Test1DataTypeWhereInput
+    where?: DepartmentSummaryWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Test1DataTypes to fetch.
+     * Determine the order of DepartmentSummaries to fetch.
      */
-    orderBy?: Test1DataTypeOrderByWithRelationInput | Test1DataTypeOrderByWithRelationInput[]
+    orderBy?: DepartmentSummaryOrderByWithRelationInput | DepartmentSummaryOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Test1DataTypes.
+     * Sets the position for listing DepartmentSummaries.
      */
-    cursor?: Test1DataTypeWhereUniqueInput
+    cursor?: DepartmentSummaryWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Test1DataTypes from the position of the cursor.
+     * Take `±n` DepartmentSummaries from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Test1DataTypes.
+     * Skip the first `n` DepartmentSummaries.
      */
     skip?: number
-    distinct?: Test1DataTypeScalarFieldEnum | Test1DataTypeScalarFieldEnum[]
+    distinct?: DepartmentSummaryScalarFieldEnum | DepartmentSummaryScalarFieldEnum[]
   }
 
   /**
-   * Test1DataType create
+   * DepartmentSummary create
    */
-  export type Test1DataTypeCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DepartmentSummaryCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Test1DataType
+     * Select specific fields to fetch from the DepartmentSummary
      */
-    select?: Test1DataTypeSelect<ExtArgs> | null
+    select?: DepartmentSummarySelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Test1DataType
+     * Omit specific fields from the DepartmentSummary
      */
-    omit?: Test1DataTypeOmit<ExtArgs> | null
+    omit?: DepartmentSummaryOmit<ExtArgs> | null
     /**
-     * The data needed to create a Test1DataType.
+     * The data needed to create a DepartmentSummary.
      */
-    data: XOR<Test1DataTypeCreateInput, Test1DataTypeUncheckedCreateInput>
+    data: XOR<DepartmentSummaryCreateInput, DepartmentSummaryUncheckedCreateInput>
   }
 
   /**
-   * Test1DataType createMany
+   * DepartmentSummary createMany
    */
-  export type Test1DataTypeCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DepartmentSummaryCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Test1DataTypes.
+     * The data used to create many DepartmentSummaries.
      */
-    data: Test1DataTypeCreateManyInput | Test1DataTypeCreateManyInput[]
+    data: DepartmentSummaryCreateManyInput | DepartmentSummaryCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Test1DataType createManyAndReturn
+   * DepartmentSummary createManyAndReturn
    */
-  export type Test1DataTypeCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DepartmentSummaryCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Test1DataType
+     * Select specific fields to fetch from the DepartmentSummary
      */
-    select?: Test1DataTypeSelectCreateManyAndReturn<ExtArgs> | null
+    select?: DepartmentSummarySelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Test1DataType
+     * Omit specific fields from the DepartmentSummary
      */
-    omit?: Test1DataTypeOmit<ExtArgs> | null
+    omit?: DepartmentSummaryOmit<ExtArgs> | null
     /**
-     * The data used to create many Test1DataTypes.
+     * The data used to create many DepartmentSummaries.
      */
-    data: Test1DataTypeCreateManyInput | Test1DataTypeCreateManyInput[]
+    data: DepartmentSummaryCreateManyInput | DepartmentSummaryCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Test1DataType update
+   * DepartmentSummary update
    */
-  export type Test1DataTypeUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DepartmentSummaryUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Test1DataType
+     * Select specific fields to fetch from the DepartmentSummary
      */
-    select?: Test1DataTypeSelect<ExtArgs> | null
+    select?: DepartmentSummarySelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Test1DataType
+     * Omit specific fields from the DepartmentSummary
      */
-    omit?: Test1DataTypeOmit<ExtArgs> | null
+    omit?: DepartmentSummaryOmit<ExtArgs> | null
     /**
-     * The data needed to update a Test1DataType.
+     * The data needed to update a DepartmentSummary.
      */
-    data: XOR<Test1DataTypeUpdateInput, Test1DataTypeUncheckedUpdateInput>
+    data: XOR<DepartmentSummaryUpdateInput, DepartmentSummaryUncheckedUpdateInput>
     /**
-     * Choose, which Test1DataType to update.
+     * Choose, which DepartmentSummary to update.
      */
-    where: Test1DataTypeWhereUniqueInput
+    where: DepartmentSummaryWhereUniqueInput
   }
 
   /**
-   * Test1DataType updateMany
+   * DepartmentSummary updateMany
    */
-  export type Test1DataTypeUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DepartmentSummaryUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Test1DataTypes.
+     * The data used to update DepartmentSummaries.
      */
-    data: XOR<Test1DataTypeUpdateManyMutationInput, Test1DataTypeUncheckedUpdateManyInput>
+    data: XOR<DepartmentSummaryUpdateManyMutationInput, DepartmentSummaryUncheckedUpdateManyInput>
     /**
-     * Filter which Test1DataTypes to update
+     * Filter which DepartmentSummaries to update
      */
-    where?: Test1DataTypeWhereInput
+    where?: DepartmentSummaryWhereInput
     /**
-     * Limit how many Test1DataTypes to update.
+     * Limit how many DepartmentSummaries to update.
      */
     limit?: number
   }
 
   /**
-   * Test1DataType updateManyAndReturn
+   * DepartmentSummary updateManyAndReturn
    */
-  export type Test1DataTypeUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DepartmentSummaryUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Test1DataType
+     * Select specific fields to fetch from the DepartmentSummary
      */
-    select?: Test1DataTypeSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: DepartmentSummarySelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Test1DataType
+     * Omit specific fields from the DepartmentSummary
      */
-    omit?: Test1DataTypeOmit<ExtArgs> | null
+    omit?: DepartmentSummaryOmit<ExtArgs> | null
     /**
-     * The data used to update Test1DataTypes.
+     * The data used to update DepartmentSummaries.
      */
-    data: XOR<Test1DataTypeUpdateManyMutationInput, Test1DataTypeUncheckedUpdateManyInput>
+    data: XOR<DepartmentSummaryUpdateManyMutationInput, DepartmentSummaryUncheckedUpdateManyInput>
     /**
-     * Filter which Test1DataTypes to update
+     * Filter which DepartmentSummaries to update
      */
-    where?: Test1DataTypeWhereInput
+    where?: DepartmentSummaryWhereInput
     /**
-     * Limit how many Test1DataTypes to update.
+     * Limit how many DepartmentSummaries to update.
      */
     limit?: number
   }
 
   /**
-   * Test1DataType upsert
+   * DepartmentSummary upsert
    */
-  export type Test1DataTypeUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DepartmentSummaryUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Test1DataType
+     * Select specific fields to fetch from the DepartmentSummary
      */
-    select?: Test1DataTypeSelect<ExtArgs> | null
+    select?: DepartmentSummarySelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Test1DataType
+     * Omit specific fields from the DepartmentSummary
      */
-    omit?: Test1DataTypeOmit<ExtArgs> | null
+    omit?: DepartmentSummaryOmit<ExtArgs> | null
     /**
-     * The filter to search for the Test1DataType to update in case it exists.
+     * The filter to search for the DepartmentSummary to update in case it exists.
      */
-    where: Test1DataTypeWhereUniqueInput
+    where: DepartmentSummaryWhereUniqueInput
     /**
-     * In case the Test1DataType found by the `where` argument doesn't exist, create a new Test1DataType with this data.
+     * In case the DepartmentSummary found by the `where` argument doesn't exist, create a new DepartmentSummary with this data.
      */
-    create: XOR<Test1DataTypeCreateInput, Test1DataTypeUncheckedCreateInput>
+    create: XOR<DepartmentSummaryCreateInput, DepartmentSummaryUncheckedCreateInput>
     /**
-     * In case the Test1DataType was found with the provided `where` argument, update it with this data.
+     * In case the DepartmentSummary was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<Test1DataTypeUpdateInput, Test1DataTypeUncheckedUpdateInput>
+    update: XOR<DepartmentSummaryUpdateInput, DepartmentSummaryUncheckedUpdateInput>
   }
 
   /**
-   * Test1DataType delete
+   * DepartmentSummary delete
    */
-  export type Test1DataTypeDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DepartmentSummaryDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Test1DataType
+     * Select specific fields to fetch from the DepartmentSummary
      */
-    select?: Test1DataTypeSelect<ExtArgs> | null
+    select?: DepartmentSummarySelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Test1DataType
+     * Omit specific fields from the DepartmentSummary
      */
-    omit?: Test1DataTypeOmit<ExtArgs> | null
+    omit?: DepartmentSummaryOmit<ExtArgs> | null
     /**
-     * Filter which Test1DataType to delete.
+     * Filter which DepartmentSummary to delete.
      */
-    where: Test1DataTypeWhereUniqueInput
+    where: DepartmentSummaryWhereUniqueInput
   }
 
   /**
-   * Test1DataType deleteMany
+   * DepartmentSummary deleteMany
    */
-  export type Test1DataTypeDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DepartmentSummaryDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Test1DataTypes to delete
+     * Filter which DepartmentSummaries to delete
      */
-    where?: Test1DataTypeWhereInput
+    where?: DepartmentSummaryWhereInput
     /**
-     * Limit how many Test1DataTypes to delete.
+     * Limit how many DepartmentSummaries to delete.
      */
     limit?: number
   }
 
   /**
-   * Test1DataType without action
+   * DepartmentSummary without action
    */
-  export type Test1DataTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type DepartmentSummaryDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Test1DataType
+     * Select specific fields to fetch from the DepartmentSummary
      */
-    select?: Test1DataTypeSelect<ExtArgs> | null
+    select?: DepartmentSummarySelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Test1DataType
+     * Omit specific fields from the DepartmentSummary
      */
-    omit?: Test1DataTypeOmit<ExtArgs> | null
+    omit?: DepartmentSummaryOmit<ExtArgs> | null
   }
 
 
@@ -2967,21 +3105,31 @@ export namespace Prisma {
   export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-  export const Test1DataModelScalarFieldEnum: {
+  export const UserScalarFieldEnum: {
     id: 'id',
-    type: 'type',
-    name: 'name'
+    firstName: 'firstName',
+    lastName: 'lastName',
+    age: 'age',
+    gender: 'gender',
+    hairColor: 'hairColor',
+    postalCode: 'postalCode',
+    department: 'department'
   };
 
-  export type Test1DataModelScalarFieldEnum = (typeof Test1DataModelScalarFieldEnum)[keyof typeof Test1DataModelScalarFieldEnum]
+  export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
 
 
-  export const Test1DataTypeScalarFieldEnum: {
-    id: 'id',
-    type: 'type'
+  export const DepartmentSummaryScalarFieldEnum: {
+    departmentName: 'departmentName',
+    maleCount: 'maleCount',
+    femaleCount: 'femaleCount',
+    ageMin: 'ageMin',
+    ageMax: 'ageMax',
+    hairSummary: 'hairSummary',
+    addressUsers: 'addressUsers'
   };
 
-  export type Test1DataTypeScalarFieldEnum = (typeof Test1DataTypeScalarFieldEnum)[keyof typeof Test1DataTypeScalarFieldEnum]
+  export type DepartmentSummaryScalarFieldEnum = (typeof DepartmentSummaryScalarFieldEnum)[keyof typeof DepartmentSummaryScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -2992,12 +3140,28 @@ export namespace Prisma {
   export type SortOrder = (typeof SortOrder)[keyof typeof SortOrder]
 
 
+  export const JsonNullValueInput: {
+    JsonNull: typeof JsonNull
+  };
+
+  export type JsonNullValueInput = (typeof JsonNullValueInput)[keyof typeof JsonNullValueInput]
+
+
   export const QueryMode: {
     default: 'default',
     insensitive: 'insensitive'
   };
 
   export type QueryMode = (typeof QueryMode)[keyof typeof QueryMode]
+
+
+  export const JsonNullValueFilter: {
+    DbNull: typeof DbNull,
+    JsonNull: typeof JsonNull,
+    AnyNull: typeof AnyNull
+  };
+
+  export type JsonNullValueFilter = (typeof JsonNullValueFilter)[keyof typeof JsonNullValueFilter]
 
 
   /**
@@ -3034,6 +3198,20 @@ export namespace Prisma {
 
 
   /**
+   * Reference to a field of type 'Json'
+   */
+  export type JsonFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Json'>
+    
+
+
+  /**
+   * Reference to a field of type 'QueryMode'
+   */
+  export type EnumQueryModeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'QueryMode'>
+    
+
+
+  /**
    * Reference to a field of type 'Float'
    */
   export type FloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float'>
@@ -3050,158 +3228,284 @@ export namespace Prisma {
    */
 
 
-  export type Test1DataModelWhereInput = {
-    AND?: Test1DataModelWhereInput | Test1DataModelWhereInput[]
-    OR?: Test1DataModelWhereInput[]
-    NOT?: Test1DataModelWhereInput | Test1DataModelWhereInput[]
-    id?: IntFilter<"Test1DataModel"> | number
-    type?: StringFilter<"Test1DataModel"> | string
-    name?: StringFilter<"Test1DataModel"> | string
+  export type UserWhereInput = {
+    AND?: UserWhereInput | UserWhereInput[]
+    OR?: UserWhereInput[]
+    NOT?: UserWhereInput | UserWhereInput[]
+    id?: IntFilter<"User"> | number
+    firstName?: StringFilter<"User"> | string
+    lastName?: StringFilter<"User"> | string
+    age?: IntFilter<"User"> | number
+    gender?: StringFilter<"User"> | string
+    hairColor?: StringFilter<"User"> | string
+    postalCode?: StringFilter<"User"> | string
+    department?: StringFilter<"User"> | string
   }
 
-  export type Test1DataModelOrderByWithRelationInput = {
+  export type UserOrderByWithRelationInput = {
     id?: SortOrder
-    type?: SortOrder
-    name?: SortOrder
+    firstName?: SortOrder
+    lastName?: SortOrder
+    age?: SortOrder
+    gender?: SortOrder
+    hairColor?: SortOrder
+    postalCode?: SortOrder
+    department?: SortOrder
   }
 
-  export type Test1DataModelWhereUniqueInput = Prisma.AtLeast<{
+  export type UserWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: Test1DataModelWhereInput | Test1DataModelWhereInput[]
-    OR?: Test1DataModelWhereInput[]
-    NOT?: Test1DataModelWhereInput | Test1DataModelWhereInput[]
-    type?: StringFilter<"Test1DataModel"> | string
-    name?: StringFilter<"Test1DataModel"> | string
+    AND?: UserWhereInput | UserWhereInput[]
+    OR?: UserWhereInput[]
+    NOT?: UserWhereInput | UserWhereInput[]
+    firstName?: StringFilter<"User"> | string
+    lastName?: StringFilter<"User"> | string
+    age?: IntFilter<"User"> | number
+    gender?: StringFilter<"User"> | string
+    hairColor?: StringFilter<"User"> | string
+    postalCode?: StringFilter<"User"> | string
+    department?: StringFilter<"User"> | string
   }, "id">
 
-  export type Test1DataModelOrderByWithAggregationInput = {
+  export type UserOrderByWithAggregationInput = {
     id?: SortOrder
-    type?: SortOrder
-    name?: SortOrder
-    _count?: Test1DataModelCountOrderByAggregateInput
-    _avg?: Test1DataModelAvgOrderByAggregateInput
-    _max?: Test1DataModelMaxOrderByAggregateInput
-    _min?: Test1DataModelMinOrderByAggregateInput
-    _sum?: Test1DataModelSumOrderByAggregateInput
+    firstName?: SortOrder
+    lastName?: SortOrder
+    age?: SortOrder
+    gender?: SortOrder
+    hairColor?: SortOrder
+    postalCode?: SortOrder
+    department?: SortOrder
+    _count?: UserCountOrderByAggregateInput
+    _avg?: UserAvgOrderByAggregateInput
+    _max?: UserMaxOrderByAggregateInput
+    _min?: UserMinOrderByAggregateInput
+    _sum?: UserSumOrderByAggregateInput
   }
 
-  export type Test1DataModelScalarWhereWithAggregatesInput = {
-    AND?: Test1DataModelScalarWhereWithAggregatesInput | Test1DataModelScalarWhereWithAggregatesInput[]
-    OR?: Test1DataModelScalarWhereWithAggregatesInput[]
-    NOT?: Test1DataModelScalarWhereWithAggregatesInput | Test1DataModelScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"Test1DataModel"> | number
-    type?: StringWithAggregatesFilter<"Test1DataModel"> | string
-    name?: StringWithAggregatesFilter<"Test1DataModel"> | string
+  export type UserScalarWhereWithAggregatesInput = {
+    AND?: UserScalarWhereWithAggregatesInput | UserScalarWhereWithAggregatesInput[]
+    OR?: UserScalarWhereWithAggregatesInput[]
+    NOT?: UserScalarWhereWithAggregatesInput | UserScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"User"> | number
+    firstName?: StringWithAggregatesFilter<"User"> | string
+    lastName?: StringWithAggregatesFilter<"User"> | string
+    age?: IntWithAggregatesFilter<"User"> | number
+    gender?: StringWithAggregatesFilter<"User"> | string
+    hairColor?: StringWithAggregatesFilter<"User"> | string
+    postalCode?: StringWithAggregatesFilter<"User"> | string
+    department?: StringWithAggregatesFilter<"User"> | string
   }
 
-  export type Test1DataTypeWhereInput = {
-    AND?: Test1DataTypeWhereInput | Test1DataTypeWhereInput[]
-    OR?: Test1DataTypeWhereInput[]
-    NOT?: Test1DataTypeWhereInput | Test1DataTypeWhereInput[]
-    id?: IntFilter<"Test1DataType"> | number
-    type?: StringFilter<"Test1DataType"> | string
+  export type DepartmentSummaryWhereInput = {
+    AND?: DepartmentSummaryWhereInput | DepartmentSummaryWhereInput[]
+    OR?: DepartmentSummaryWhereInput[]
+    NOT?: DepartmentSummaryWhereInput | DepartmentSummaryWhereInput[]
+    departmentName?: StringFilter<"DepartmentSummary"> | string
+    maleCount?: IntFilter<"DepartmentSummary"> | number
+    femaleCount?: IntFilter<"DepartmentSummary"> | number
+    ageMin?: IntFilter<"DepartmentSummary"> | number
+    ageMax?: IntFilter<"DepartmentSummary"> | number
+    hairSummary?: JsonFilter<"DepartmentSummary">
+    addressUsers?: JsonFilter<"DepartmentSummary">
   }
 
-  export type Test1DataTypeOrderByWithRelationInput = {
-    id?: SortOrder
-    type?: SortOrder
+  export type DepartmentSummaryOrderByWithRelationInput = {
+    departmentName?: SortOrder
+    maleCount?: SortOrder
+    femaleCount?: SortOrder
+    ageMin?: SortOrder
+    ageMax?: SortOrder
+    hairSummary?: SortOrder
+    addressUsers?: SortOrder
   }
 
-  export type Test1DataTypeWhereUniqueInput = Prisma.AtLeast<{
-    id?: number
-    AND?: Test1DataTypeWhereInput | Test1DataTypeWhereInput[]
-    OR?: Test1DataTypeWhereInput[]
-    NOT?: Test1DataTypeWhereInput | Test1DataTypeWhereInput[]
-    type?: StringFilter<"Test1DataType"> | string
-  }, "id">
+  export type DepartmentSummaryWhereUniqueInput = Prisma.AtLeast<{
+    departmentName?: string
+    AND?: DepartmentSummaryWhereInput | DepartmentSummaryWhereInput[]
+    OR?: DepartmentSummaryWhereInput[]
+    NOT?: DepartmentSummaryWhereInput | DepartmentSummaryWhereInput[]
+    maleCount?: IntFilter<"DepartmentSummary"> | number
+    femaleCount?: IntFilter<"DepartmentSummary"> | number
+    ageMin?: IntFilter<"DepartmentSummary"> | number
+    ageMax?: IntFilter<"DepartmentSummary"> | number
+    hairSummary?: JsonFilter<"DepartmentSummary">
+    addressUsers?: JsonFilter<"DepartmentSummary">
+  }, "departmentName">
 
-  export type Test1DataTypeOrderByWithAggregationInput = {
-    id?: SortOrder
-    type?: SortOrder
-    _count?: Test1DataTypeCountOrderByAggregateInput
-    _avg?: Test1DataTypeAvgOrderByAggregateInput
-    _max?: Test1DataTypeMaxOrderByAggregateInput
-    _min?: Test1DataTypeMinOrderByAggregateInput
-    _sum?: Test1DataTypeSumOrderByAggregateInput
+  export type DepartmentSummaryOrderByWithAggregationInput = {
+    departmentName?: SortOrder
+    maleCount?: SortOrder
+    femaleCount?: SortOrder
+    ageMin?: SortOrder
+    ageMax?: SortOrder
+    hairSummary?: SortOrder
+    addressUsers?: SortOrder
+    _count?: DepartmentSummaryCountOrderByAggregateInput
+    _avg?: DepartmentSummaryAvgOrderByAggregateInput
+    _max?: DepartmentSummaryMaxOrderByAggregateInput
+    _min?: DepartmentSummaryMinOrderByAggregateInput
+    _sum?: DepartmentSummarySumOrderByAggregateInput
   }
 
-  export type Test1DataTypeScalarWhereWithAggregatesInput = {
-    AND?: Test1DataTypeScalarWhereWithAggregatesInput | Test1DataTypeScalarWhereWithAggregatesInput[]
-    OR?: Test1DataTypeScalarWhereWithAggregatesInput[]
-    NOT?: Test1DataTypeScalarWhereWithAggregatesInput | Test1DataTypeScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"Test1DataType"> | number
-    type?: StringWithAggregatesFilter<"Test1DataType"> | string
+  export type DepartmentSummaryScalarWhereWithAggregatesInput = {
+    AND?: DepartmentSummaryScalarWhereWithAggregatesInput | DepartmentSummaryScalarWhereWithAggregatesInput[]
+    OR?: DepartmentSummaryScalarWhereWithAggregatesInput[]
+    NOT?: DepartmentSummaryScalarWhereWithAggregatesInput | DepartmentSummaryScalarWhereWithAggregatesInput[]
+    departmentName?: StringWithAggregatesFilter<"DepartmentSummary"> | string
+    maleCount?: IntWithAggregatesFilter<"DepartmentSummary"> | number
+    femaleCount?: IntWithAggregatesFilter<"DepartmentSummary"> | number
+    ageMin?: IntWithAggregatesFilter<"DepartmentSummary"> | number
+    ageMax?: IntWithAggregatesFilter<"DepartmentSummary"> | number
+    hairSummary?: JsonWithAggregatesFilter<"DepartmentSummary">
+    addressUsers?: JsonWithAggregatesFilter<"DepartmentSummary">
   }
 
-  export type Test1DataModelCreateInput = {
-    type: string
-    name: string
+  export type UserCreateInput = {
+    id: number
+    firstName: string
+    lastName: string
+    age: number
+    gender: string
+    hairColor: string
+    postalCode: string
+    department: string
   }
 
-  export type Test1DataModelUncheckedCreateInput = {
-    id?: number
-    type: string
-    name: string
+  export type UserUncheckedCreateInput = {
+    id: number
+    firstName: string
+    lastName: string
+    age: number
+    gender: string
+    hairColor: string
+    postalCode: string
+    department: string
   }
 
-  export type Test1DataModelUpdateInput = {
-    type?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-  }
-
-  export type Test1DataModelUncheckedUpdateInput = {
+  export type UserUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
-    type?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
+    firstName?: StringFieldUpdateOperationsInput | string
+    lastName?: StringFieldUpdateOperationsInput | string
+    age?: IntFieldUpdateOperationsInput | number
+    gender?: StringFieldUpdateOperationsInput | string
+    hairColor?: StringFieldUpdateOperationsInput | string
+    postalCode?: StringFieldUpdateOperationsInput | string
+    department?: StringFieldUpdateOperationsInput | string
   }
 
-  export type Test1DataModelCreateManyInput = {
-    id?: number
-    type: string
-    name: string
-  }
-
-  export type Test1DataModelUpdateManyMutationInput = {
-    type?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
-  }
-
-  export type Test1DataModelUncheckedUpdateManyInput = {
+  export type UserUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
-    type?: StringFieldUpdateOperationsInput | string
-    name?: StringFieldUpdateOperationsInput | string
+    firstName?: StringFieldUpdateOperationsInput | string
+    lastName?: StringFieldUpdateOperationsInput | string
+    age?: IntFieldUpdateOperationsInput | number
+    gender?: StringFieldUpdateOperationsInput | string
+    hairColor?: StringFieldUpdateOperationsInput | string
+    postalCode?: StringFieldUpdateOperationsInput | string
+    department?: StringFieldUpdateOperationsInput | string
   }
 
-  export type Test1DataTypeCreateInput = {
-    type: string
+  export type UserCreateManyInput = {
+    id: number
+    firstName: string
+    lastName: string
+    age: number
+    gender: string
+    hairColor: string
+    postalCode: string
+    department: string
   }
 
-  export type Test1DataTypeUncheckedCreateInput = {
-    id?: number
-    type: string
-  }
-
-  export type Test1DataTypeUpdateInput = {
-    type?: StringFieldUpdateOperationsInput | string
-  }
-
-  export type Test1DataTypeUncheckedUpdateInput = {
+  export type UserUpdateManyMutationInput = {
     id?: IntFieldUpdateOperationsInput | number
-    type?: StringFieldUpdateOperationsInput | string
+    firstName?: StringFieldUpdateOperationsInput | string
+    lastName?: StringFieldUpdateOperationsInput | string
+    age?: IntFieldUpdateOperationsInput | number
+    gender?: StringFieldUpdateOperationsInput | string
+    hairColor?: StringFieldUpdateOperationsInput | string
+    postalCode?: StringFieldUpdateOperationsInput | string
+    department?: StringFieldUpdateOperationsInput | string
   }
 
-  export type Test1DataTypeCreateManyInput = {
-    id?: number
-    type: string
-  }
-
-  export type Test1DataTypeUpdateManyMutationInput = {
-    type?: StringFieldUpdateOperationsInput | string
-  }
-
-  export type Test1DataTypeUncheckedUpdateManyInput = {
+  export type UserUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
-    type?: StringFieldUpdateOperationsInput | string
+    firstName?: StringFieldUpdateOperationsInput | string
+    lastName?: StringFieldUpdateOperationsInput | string
+    age?: IntFieldUpdateOperationsInput | number
+    gender?: StringFieldUpdateOperationsInput | string
+    hairColor?: StringFieldUpdateOperationsInput | string
+    postalCode?: StringFieldUpdateOperationsInput | string
+    department?: StringFieldUpdateOperationsInput | string
+  }
+
+  export type DepartmentSummaryCreateInput = {
+    departmentName: string
+    maleCount: number
+    femaleCount: number
+    ageMin: number
+    ageMax: number
+    hairSummary: JsonNullValueInput | InputJsonValue
+    addressUsers: JsonNullValueInput | InputJsonValue
+  }
+
+  export type DepartmentSummaryUncheckedCreateInput = {
+    departmentName: string
+    maleCount: number
+    femaleCount: number
+    ageMin: number
+    ageMax: number
+    hairSummary: JsonNullValueInput | InputJsonValue
+    addressUsers: JsonNullValueInput | InputJsonValue
+  }
+
+  export type DepartmentSummaryUpdateInput = {
+    departmentName?: StringFieldUpdateOperationsInput | string
+    maleCount?: IntFieldUpdateOperationsInput | number
+    femaleCount?: IntFieldUpdateOperationsInput | number
+    ageMin?: IntFieldUpdateOperationsInput | number
+    ageMax?: IntFieldUpdateOperationsInput | number
+    hairSummary?: JsonNullValueInput | InputJsonValue
+    addressUsers?: JsonNullValueInput | InputJsonValue
+  }
+
+  export type DepartmentSummaryUncheckedUpdateInput = {
+    departmentName?: StringFieldUpdateOperationsInput | string
+    maleCount?: IntFieldUpdateOperationsInput | number
+    femaleCount?: IntFieldUpdateOperationsInput | number
+    ageMin?: IntFieldUpdateOperationsInput | number
+    ageMax?: IntFieldUpdateOperationsInput | number
+    hairSummary?: JsonNullValueInput | InputJsonValue
+    addressUsers?: JsonNullValueInput | InputJsonValue
+  }
+
+  export type DepartmentSummaryCreateManyInput = {
+    departmentName: string
+    maleCount: number
+    femaleCount: number
+    ageMin: number
+    ageMax: number
+    hairSummary: JsonNullValueInput | InputJsonValue
+    addressUsers: JsonNullValueInput | InputJsonValue
+  }
+
+  export type DepartmentSummaryUpdateManyMutationInput = {
+    departmentName?: StringFieldUpdateOperationsInput | string
+    maleCount?: IntFieldUpdateOperationsInput | number
+    femaleCount?: IntFieldUpdateOperationsInput | number
+    ageMin?: IntFieldUpdateOperationsInput | number
+    ageMax?: IntFieldUpdateOperationsInput | number
+    hairSummary?: JsonNullValueInput | InputJsonValue
+    addressUsers?: JsonNullValueInput | InputJsonValue
+  }
+
+  export type DepartmentSummaryUncheckedUpdateManyInput = {
+    departmentName?: StringFieldUpdateOperationsInput | string
+    maleCount?: IntFieldUpdateOperationsInput | number
+    femaleCount?: IntFieldUpdateOperationsInput | number
+    ageMin?: IntFieldUpdateOperationsInput | number
+    ageMax?: IntFieldUpdateOperationsInput | number
+    hairSummary?: JsonNullValueInput | InputJsonValue
+    addressUsers?: JsonNullValueInput | InputJsonValue
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -3230,30 +3534,47 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
-  export type Test1DataModelCountOrderByAggregateInput = {
+  export type UserCountOrderByAggregateInput = {
     id?: SortOrder
-    type?: SortOrder
-    name?: SortOrder
+    firstName?: SortOrder
+    lastName?: SortOrder
+    age?: SortOrder
+    gender?: SortOrder
+    hairColor?: SortOrder
+    postalCode?: SortOrder
+    department?: SortOrder
   }
 
-  export type Test1DataModelAvgOrderByAggregateInput = {
+  export type UserAvgOrderByAggregateInput = {
     id?: SortOrder
+    age?: SortOrder
   }
 
-  export type Test1DataModelMaxOrderByAggregateInput = {
+  export type UserMaxOrderByAggregateInput = {
     id?: SortOrder
-    type?: SortOrder
-    name?: SortOrder
+    firstName?: SortOrder
+    lastName?: SortOrder
+    age?: SortOrder
+    gender?: SortOrder
+    hairColor?: SortOrder
+    postalCode?: SortOrder
+    department?: SortOrder
   }
 
-  export type Test1DataModelMinOrderByAggregateInput = {
+  export type UserMinOrderByAggregateInput = {
     id?: SortOrder
-    type?: SortOrder
-    name?: SortOrder
+    firstName?: SortOrder
+    lastName?: SortOrder
+    age?: SortOrder
+    gender?: SortOrder
+    hairColor?: SortOrder
+    postalCode?: SortOrder
+    department?: SortOrder
   }
 
-  export type Test1DataModelSumOrderByAggregateInput = {
+  export type UserSumOrderByAggregateInput = {
     id?: SortOrder
+    age?: SortOrder
   }
 
   export type IntWithAggregatesFilter<$PrismaModel = never> = {
@@ -3289,32 +3610,94 @@ export namespace Prisma {
     _min?: NestedStringFilter<$PrismaModel>
     _max?: NestedStringFilter<$PrismaModel>
   }
+  export type JsonFilter<$PrismaModel = never> =
+    | PatchUndefined<
+        Either<Required<JsonFilterBase<$PrismaModel>>, Exclude<keyof Required<JsonFilterBase<$PrismaModel>>, 'path'>>,
+        Required<JsonFilterBase<$PrismaModel>>
+      >
+    | OptionalFlat<Omit<Required<JsonFilterBase<$PrismaModel>>, 'path'>>
 
-  export type Test1DataTypeCountOrderByAggregateInput = {
-    id?: SortOrder
-    type?: SortOrder
+  export type JsonFilterBase<$PrismaModel = never> = {
+    equals?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | JsonNullValueFilter
+    path?: string[]
+    mode?: QueryMode | EnumQueryModeFieldRefInput<$PrismaModel>
+    string_contains?: string | StringFieldRefInput<$PrismaModel>
+    string_starts_with?: string | StringFieldRefInput<$PrismaModel>
+    string_ends_with?: string | StringFieldRefInput<$PrismaModel>
+    array_starts_with?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | null
+    array_ends_with?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | null
+    array_contains?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | null
+    lt?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
+    lte?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
+    gt?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
+    gte?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
+    not?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | JsonNullValueFilter
   }
 
-  export type Test1DataTypeAvgOrderByAggregateInput = {
-    id?: SortOrder
+  export type DepartmentSummaryCountOrderByAggregateInput = {
+    departmentName?: SortOrder
+    maleCount?: SortOrder
+    femaleCount?: SortOrder
+    ageMin?: SortOrder
+    ageMax?: SortOrder
+    hairSummary?: SortOrder
+    addressUsers?: SortOrder
   }
 
-  export type Test1DataTypeMaxOrderByAggregateInput = {
-    id?: SortOrder
-    type?: SortOrder
+  export type DepartmentSummaryAvgOrderByAggregateInput = {
+    maleCount?: SortOrder
+    femaleCount?: SortOrder
+    ageMin?: SortOrder
+    ageMax?: SortOrder
   }
 
-  export type Test1DataTypeMinOrderByAggregateInput = {
-    id?: SortOrder
-    type?: SortOrder
+  export type DepartmentSummaryMaxOrderByAggregateInput = {
+    departmentName?: SortOrder
+    maleCount?: SortOrder
+    femaleCount?: SortOrder
+    ageMin?: SortOrder
+    ageMax?: SortOrder
   }
 
-  export type Test1DataTypeSumOrderByAggregateInput = {
-    id?: SortOrder
+  export type DepartmentSummaryMinOrderByAggregateInput = {
+    departmentName?: SortOrder
+    maleCount?: SortOrder
+    femaleCount?: SortOrder
+    ageMin?: SortOrder
+    ageMax?: SortOrder
   }
 
-  export type StringFieldUpdateOperationsInput = {
-    set?: string
+  export type DepartmentSummarySumOrderByAggregateInput = {
+    maleCount?: SortOrder
+    femaleCount?: SortOrder
+    ageMin?: SortOrder
+    ageMax?: SortOrder
+  }
+  export type JsonWithAggregatesFilter<$PrismaModel = never> =
+    | PatchUndefined<
+        Either<Required<JsonWithAggregatesFilterBase<$PrismaModel>>, Exclude<keyof Required<JsonWithAggregatesFilterBase<$PrismaModel>>, 'path'>>,
+        Required<JsonWithAggregatesFilterBase<$PrismaModel>>
+      >
+    | OptionalFlat<Omit<Required<JsonWithAggregatesFilterBase<$PrismaModel>>, 'path'>>
+
+  export type JsonWithAggregatesFilterBase<$PrismaModel = never> = {
+    equals?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | JsonNullValueFilter
+    path?: string[]
+    mode?: QueryMode | EnumQueryModeFieldRefInput<$PrismaModel>
+    string_contains?: string | StringFieldRefInput<$PrismaModel>
+    string_starts_with?: string | StringFieldRefInput<$PrismaModel>
+    string_ends_with?: string | StringFieldRefInput<$PrismaModel>
+    array_starts_with?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | null
+    array_ends_with?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | null
+    array_contains?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | null
+    lt?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
+    lte?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
+    gt?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
+    gte?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
+    not?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | JsonNullValueFilter
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedJsonFilter<$PrismaModel>
+    _max?: NestedJsonFilter<$PrismaModel>
   }
 
   export type IntFieldUpdateOperationsInput = {
@@ -3323,6 +3706,10 @@ export namespace Prisma {
     decrement?: number
     multiply?: number
     divide?: number
+  }
+
+  export type StringFieldUpdateOperationsInput = {
+    set?: string
   }
 
   export type NestedIntFilter<$PrismaModel = never> = {
@@ -3392,6 +3779,29 @@ export namespace Prisma {
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedStringFilter<$PrismaModel>
     _max?: NestedStringFilter<$PrismaModel>
+  }
+  export type NestedJsonFilter<$PrismaModel = never> =
+    | PatchUndefined<
+        Either<Required<NestedJsonFilterBase<$PrismaModel>>, Exclude<keyof Required<NestedJsonFilterBase<$PrismaModel>>, 'path'>>,
+        Required<NestedJsonFilterBase<$PrismaModel>>
+      >
+    | OptionalFlat<Omit<Required<NestedJsonFilterBase<$PrismaModel>>, 'path'>>
+
+  export type NestedJsonFilterBase<$PrismaModel = never> = {
+    equals?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | JsonNullValueFilter
+    path?: string[]
+    mode?: QueryMode | EnumQueryModeFieldRefInput<$PrismaModel>
+    string_contains?: string | StringFieldRefInput<$PrismaModel>
+    string_starts_with?: string | StringFieldRefInput<$PrismaModel>
+    string_ends_with?: string | StringFieldRefInput<$PrismaModel>
+    array_starts_with?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | null
+    array_ends_with?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | null
+    array_contains?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | null
+    lt?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
+    lte?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
+    gt?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
+    gte?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
+    not?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | JsonNullValueFilter
   }
 
 
