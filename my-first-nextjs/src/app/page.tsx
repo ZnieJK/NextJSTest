@@ -5,7 +5,7 @@ import { test1Data } from '../../prisma/constants'
 import Column from './components/Column'
 import { ButtonData } from './types/ButtonData'
 
-//TODO Need to be update as homepage
+//TODO Need to be update this page as homepage
 
 export default function HomePage() {
 
