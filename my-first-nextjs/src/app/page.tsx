@@ -5,6 +5,8 @@ import { test1Data } from '../../prisma/constants'
 import Column from './components/Column'
 import { ButtonData } from './types/ButtonData'
 
+//TODO Need to be update as homepage
+
 export default function HomePage() {
 
   const distinctTypes = Array.from(new Set(test1Data.map(item => item.type)))
