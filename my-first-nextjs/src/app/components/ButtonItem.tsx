@@ -53,7 +53,9 @@ export default function ButtonItem({ id, label, type, origin, current, onChangeC
   }, [current])
 
   return (
-    <button onClick={handleClick} className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+    <button onClick={handleClick} className="px-4 py-2 rounded 
+      bg-gray-200 text-gray-900 hover:bg-gray-300 
+      dark:bg-gray-700 dark:hover:bg-gray-800 dark:text-gray-100">
       {label}
     </button>
   )
