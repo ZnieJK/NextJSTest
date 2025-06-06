@@ -5,7 +5,7 @@ import { test1Data } from '../../../prisma/constants'
 import Column from '../components/Column'
 import { ButtonData } from '../types/ButtonData'
 
-export default function HomePage() {
+export default function Page() {
 
   const distinctTypes = Array.from(new Set(test1Data.map(item => item.type)))
 
@@ -29,7 +29,6 @@ export default function HomePage() {
     buttons.filter(b => b.current === column)
 
 
-  //TODO Add style and decorate this page
   return (
     <main className="flex flex-col md:flex-row gap-4 p-4">
       <Column
