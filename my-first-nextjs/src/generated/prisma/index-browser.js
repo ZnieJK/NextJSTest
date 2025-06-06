@@ -141,6 +141,17 @@ exports.Prisma.DepartmentSummaryScalarFieldEnum = {
   addressUsers: 'addressUsers'
 };
 
+exports.Prisma.Test1DataModelScalarFieldEnum = {
+  id: 'id',
+  type: 'type',
+  name: 'name'
+};
+
+exports.Prisma.Test1DataTypeScalarFieldEnum = {
+  id: 'id',
+  type: 'type'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -164,7 +175,9 @@ exports.Prisma.JsonNullValueFilter = {
 
 exports.Prisma.ModelName = {
   User: 'User',
-  DepartmentSummary: 'DepartmentSummary'
+  DepartmentSummary: 'DepartmentSummary',
+  Test1DataModel: 'Test1DataModel',
+  Test1DataType: 'Test1DataType'
 };
 
 /**

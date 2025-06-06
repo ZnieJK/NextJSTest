@@ -6,7 +6,7 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../src/generated/prisma"
+  // output   = "../src/generated/prisma"
 }
 
 datasource db {
@@ -36,13 +36,13 @@ model DepartmentSummary {
 }
 
 
-// model Test1DataModel {
-//   id    Int @id @default(autoincrement())
-//   type  String 
-//   name  String
-// }
+model Test1DataModel {
+  id    Int @id @default(autoincrement())
+  type  String 
+  name  String
+}
 
-// model Test1DataType {
-//   id   Int @id @default(autoincrement())
-//   type String
-// }
+model Test1DataType {
+  id   Int @id @default(autoincrement())
+  type String
+}

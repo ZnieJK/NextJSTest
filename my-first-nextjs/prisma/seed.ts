@@ -6,14 +6,14 @@ import { ApiResponse, User } from './userModel'
 
 const prisma = new PrismaClient();
 
-// async function assignTest1Data() {
-//     for (let data of test1Data){
-//         await prisma.Test1DataModel.create({
-//             type: data.type,
-//             name: data.name
-//         })
-//     }
-// }
+async function assignTest1Data() {
+    for (let data of test1Data){
+        await prisma.Test1DataModel.create({
+            type: data.type,
+            name: data.name
+        })
+    }
+}
 async function getSeedFromAPI() {
     const response = await fetch('https://dummyjson.com/users')
     const json = await response.json() as ApiResponse;
@@ -95,27 +95,27 @@ async function getSeedFromAPI() {
 
 }
 
-// async function seedTest1() {
+async function seedTest1() {
+console.log('Seeding...');
+  const uniqueTypes = [...new Set(test1Data.map(item => item.type))];
+  await prisma.test1DataType.createMany({
+    data: uniqueTypes.map(type => ({ type })),
+    skipDuplicates: true
+  });
 
-//   const uniqueTypes = [...new Set(test1Data.map(item => item.type))];
-//   await prisma.test1DataType.createMany({
-//     data: uniqueTypes.map(type => ({ type })),
-//     skipDuplicates: true
-//   });
+  await prisma.test1DataModel.createMany({
+    data: test1Data.map(item => ({
+      type: item.type,
+      name: item.name
+    })),
+  });
+}
 
-//   await prisma.test1DataModel.createMany({
-//     data: test1Data.map(item => ({
-//       type: item.type,
-//       name: item.name
-//     })),
-//   });
-// }
-
-getSeedFromAPI().
+seedTest1().
     catch(e => {
         console.log(e);
         process.exit(1)
     }).finally(() => {
-        prisma.$disconnnect();
+       prisma.$disconnect();
     }
 )
