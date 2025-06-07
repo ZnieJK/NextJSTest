@@ -1,4 +1,6 @@
 export interface DepartmentSummary {
+  id: any
+  name: any
   departmentName: string
   maleCount: number
   femaleCount: number
