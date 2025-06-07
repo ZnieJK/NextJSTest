@@ -20,12 +20,12 @@ exports.Prisma = Prisma
 exports.$Enums = {}
 
 /**
- * Prisma Client JS version: 6.8.2
- * Query Engine version: 2060c79ba17c6bb9f5823312b6f6b7f4a845738e
+ * Prisma Client JS version: 6.9.0
+ * Query Engine version: 81e4af48011447c3cc503a190e86995b66d2a28e
  */
 Prisma.prismaVersion = {
-  client: "6.8.2",
-  engine: "2060c79ba17c6bb9f5823312b6f6b7f4a845738e"
+  client: "6.9.0",
+  engine: "81e4af48011447c3cc503a190e86995b66d2a28e"
 }
 
 Prisma.PrismaClientKnownRequestError = () => {
@@ -120,6 +120,11 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
+exports.Prisma.DepartmentScalarFieldEnum = {
+  id: 'id',
+  departmentName: 'departmentName'
+};
+
 exports.Prisma.UserScalarFieldEnum = {
   id: 'id',
   firstName: 'firstName',
@@ -139,17 +144,6 @@ exports.Prisma.DepartmentSummaryScalarFieldEnum = {
   ageMax: 'ageMax',
   hairSummary: 'hairSummary',
   addressUsers: 'addressUsers'
-};
-
-exports.Prisma.Test1DataModelScalarFieldEnum = {
-  id: 'id',
-  type: 'type',
-  name: 'name'
-};
-
-exports.Prisma.Test1DataTypeScalarFieldEnum = {
-  id: 'id',
-  type: 'type'
 };
 
 exports.Prisma.SortOrder = {
@@ -174,10 +168,9 @@ exports.Prisma.JsonNullValueFilter = {
 
 
 exports.Prisma.ModelName = {
+  department: 'department',
   User: 'User',
-  DepartmentSummary: 'DepartmentSummary',
-  Test1DataModel: 'Test1DataModel',
-  Test1DataType: 'Test1DataType'
+  DepartmentSummary: 'DepartmentSummary'
 };
 
 /**

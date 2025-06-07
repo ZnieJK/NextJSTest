@@ -12,6 +12,8 @@
     "seed": "ts-node prisma/seed.ts"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.4",
+    "@heroicons/react": "^2.2.0",
     "@prisma/client": "^6.8.2",
     "next": "15.3.2",
     "node-fetch": "^3.3.2",

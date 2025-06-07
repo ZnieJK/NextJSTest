@@ -6,17 +6,12 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../src/generated/prisma"
+  // output   = "../src/generated/prisma"
 }
 
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
-}
-
-model department {
-  id              Int     @id @default(autoincrement())
-  departmentName  String
 }
 
 model User {
@@ -31,11 +26,13 @@ model User {
 }
 
 model DepartmentSummary {
-  departmentName    String   @id 
+  departmentName    String   @id @default(cuid())
   maleCount         Int
   femaleCount       Int
   ageMin            Int
   ageMax            Int
   hairSummary       Json
   addressUsers      Json
+
+  @@map("DepartmentSummary")
 }

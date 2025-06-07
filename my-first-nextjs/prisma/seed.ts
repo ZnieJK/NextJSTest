@@ -1,25 +1,18 @@
-import {test1Data} from './constants'
+import {test2APIlink} from './constants'
 import { PrismaClient } from '@prisma/client'
 import fetch from 'node-fetch' 
-import { ApiResponse, User } from './userModel'
+import { ApiResponse } from './userModel'
 
 
 const prisma = new PrismaClient();
 
-// async function assignTest1Data() {
-//     for (let data of test1Data){
-//         await prisma.Test1DataModel.create({
-//             type: data.type,
-//             name: data.name
-//         })
-//     }
-// }
 async function getSeedFromAPI() {
-    const response = await fetch('https://dummyjson.com/users')
+    // Fetch data from dummy API
+    const response = await fetch(test2APIlink)
     const json = await response.json() as ApiResponse;
     const users = json.users
 
-    // Clear existing data
+    // Clear all existing data before seeding
     await prisma.user.deleteMany()
     await prisma.departmentSummary.deleteMany()
 
@@ -41,7 +34,6 @@ async function getSeedFromAPI() {
         const hairColor = hair?.color || 'Unknown'
         const postalCode = address?.postalCode || '00000'
 
-        // Insert user
         await prisma.user.create({
         data: {
             id: user.id,
@@ -55,7 +47,6 @@ async function getSeedFromAPI() {
         }
         })
 
-        // Aggregate department data
         if (!departmentStats.has(department)) {
         departmentStats.set(department, {
             male: 0,
@@ -73,7 +64,7 @@ async function getSeedFromAPI() {
         stats.addressUser[`${firstName}${lastName}`] = postalCode
     }
 
-    // Save summaries
+    // summaries
     for (const [department, stats] of departmentStats.entries()) {
         const ageMin = Math.min(...stats.ages)
         const ageMax = Math.max(...stats.ages)
@@ -90,26 +81,7 @@ async function getSeedFromAPI() {
         }
         })
     }
-
-    console.log('✅ Seeding complete.')
-
 }
-
-// async function seedTest1() {
-// console.log('Seeding...');
-//   const uniqueTypes = [...new Set(test1Data.map(item => item.type))];
-//   await prisma.test1DataType.createMany({
-//     data: uniqueTypes.map(type => ({ type })),
-//     skipDuplicates: true
-//   });
-
-//   await prisma.test1DataModel.createMany({
-//     data: test1Data.map(item => ({
-//       type: item.type,
-//       name: item.name
-//     })),
-//   });
-// }
 
 getSeedFromAPI().
     catch(e => {
