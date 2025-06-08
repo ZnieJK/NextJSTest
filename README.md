@@ -69,8 +69,6 @@ This command initializes the database with seed data.
 Start the Next.js app (in dev mode):
 
 ```bash
-pnpm dev
-# or
 npm run dev
 ```
 
