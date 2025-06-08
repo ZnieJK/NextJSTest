@@ -10,7 +10,7 @@ export default function HomePage() {
           Hello!
         </h1>
         <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 max-w-2xl">
-          Welcome to assignment website homepage.
+          Welcome to the assignment website homepage! By the way, I think dark mode would make this page look better.
         </p>
         
         <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 shadow-md mb-6 max-w-2xl text-left">
