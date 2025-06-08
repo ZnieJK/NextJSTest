@@ -96,6 +96,10 @@ my-first-nextjs/
 - [Question 1 - Auto Delete Todo List](http://localhost:3000/Question_1)
 - [Question 2 - Create Data from API](http://localhost:3000/Question_2)
 
+<img width="1440" alt="Screenshot 2568-06-08 at 10 59 35" src="https://github.com/user-attachments/assets/b163d3e4-2e12-424a-bfe5-4aec5cedf2a3" />
+
+<img width="1440" alt="Screenshot 2568-06-08 at 10 59 30" src="https://github.com/user-attachments/assets/0f78c58d-02e4-4717-8ac4-b9f713cff1a6" />
+
 ---
 
 ## 🛠 Notes
