@@ -19,14 +19,6 @@ Make sure the following tools are installed on your system:
   node -v
   npm -v
   ```
-
-### 3. [pnpm](https://pnpm.io/) (Optional but recommended)
-- Faster alternative to npm/yarn.
-- Install with:
-  ```bash
-  npm install -g pnpm
-  ```
-
 ---
 
 ## 📁 Step 1: Navigate to the Project
