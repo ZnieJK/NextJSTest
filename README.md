@@ -119,5 +119,3 @@ my-first-nextjs/
   ```
 
 ---
-
-Enjoy coding! 🚀
