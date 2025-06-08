@@ -111,3 +111,5 @@ my-first-nextjs/
   ```
 
 ---
+
+This project is for practice and to complete the assignment from 7-solutions/frontend-assignment.
