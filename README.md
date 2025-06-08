@@ -38,8 +38,6 @@ cd my-first-nextjs
 ## 📦 Step 2: Install Dependencies
 
 ```bash
-pnpm install
-# or
 npm install
 ```
 
