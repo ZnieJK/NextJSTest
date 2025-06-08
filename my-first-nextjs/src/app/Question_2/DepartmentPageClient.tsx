@@ -4,7 +4,7 @@ import { useState } from "react";
 import DropBoxComponent from "../components/Dropdown";
 import { DepartmentSummary } from "../types/DepartmentData";
 import { dropBoxModel } from "../types/interfaceModel";
-import Q2RowComponent from "./Component/Q2RowComponent";
+import Q2DepartmentComponent from "./Component/Q2DepartmentComponent";
 
 interface PageClientProps {
   summaries: DepartmentSummary[];
@@ -40,13 +40,13 @@ export default function DepartmentPageClient({ summaries }: PageClientProps) {
       </div>
       <div className="container mx-auto px-15">
         {summaries
-        .filter((_, index) => selectedItem?.id !== -1 && index === selectedItem?.id)
-        .map((summary, idx) => (
-        <div key={idx} className="p-4 shadow dark:shadow-gray-500/40">
-            <Q2RowComponent data={summary} />
-        </div>
+            .filter((_, index) => selectedItem?.id === -1 || index === selectedItem?.id)
+            .map((summary, idx) => (
+            <div key={idx} className="p-4 shadow dark:shadow-gray-500/40">
+                <Q2DepartmentComponent data={summary} />
+            </div>
         ))}
-        </div>
+      </div>
     </div>
   )
 }

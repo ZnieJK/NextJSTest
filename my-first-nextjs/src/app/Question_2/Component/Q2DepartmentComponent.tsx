@@ -1,15 +1,14 @@
 import { DepartmentSummary } from "@/app/types/DepartmentData";
 
-interface Q2RowComponentProps {
+interface DepartmentComponentProps {
   data: DepartmentSummary
 }
 
-export default function Q2RowComponent({ data }: Q2RowComponentProps) {
+export default function Q2DepartmentComponent({ data }: DepartmentComponentProps) {
     return (
     <div>
       <div className="px-4 sm:px-0">
         <h3 className="text-base/7 font-semibold text-gray-900 dark:text-gray-100">{data.departmentName}</h3>
-        {/* <p className="mt-1 max-w-2xl text-sm/6 text-gray-500">Personal details and application.</p> */}
       </div>
       <div className="mt-6 border-t border-gray-100 dark:border-gray-700">
         <dl className="divide-y divide-gray-100 dark:divide-gray-700">
